@@ -1,0 +1,5008 @@
+{
+  "item_id": "real-code-cpython-nsmallest-2",
+  "panel_seed": 29,
+  "initialization": "complementary",
+  "dataset_sha256": "f4058eca13c759fa8c094e01113781ad31c9d0d7eccec5e81816a84872f54154",
+  "historical_sha256": "560ac79bd379d0fd56c0e20f411ddb0942bebc2ee3b3b68712c2a2b035a4cad0",
+  "runner_sha256": "bfc413abb9ef861d6a10831c47831d7be8616a37d0ae891b9b461ac37f21f4c1",
+  "backend": {
+    "backend": "hf",
+    "model_id": "Qwen/Qwen2.5-Coder-3B-Instruct",
+    "revision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+    "model_type": "qwen2",
+    "dtype": "float16",
+    "device": "cuda:0",
+    "device_name": "Tesla T4",
+    "python": "3.13.16",
+    "torch": "2.14.1+cu130",
+    "transformers": "5.22.1",
+    "cuda": "13.0",
+    "tokenizer_class": "Qwen2Tokenizer",
+    "temperature": 0.3,
+    "sampling": "full_vocabulary_multinomial",
+    "use_cache": true,
+    "eos_token_ids": [
+      151643,
+      151645
+    ],
+    "capture_layers": [
+      17
+    ],
+    "capture_logits": true
+  },
+  "gpu_total_bytes": 15637086208,
+  "gpu_peak_allocated_bytes": 6391113216,
+  "timing_seconds": {
+    "model_load": 41.243692552000084,
+    "off": 9.561058916999855,
+    "on": 8.322180682999942,
+    "inspect_private": 2.60018028699983,
+    "inspect_peer": 2.658865339000158,
+    "total_including_load": 66.68423967100011
+  },
+  "model_calls": 48,
+  "capture_control": "First-token logits recorded in both modes. Block 17 hook enabled only in on mode.",
+  "score_definition": "Full-vocabulary first-token softmax at decoding temperature. Labels are exact single appended tokens.",
+  "historical_panel": {
+    "gold": "no",
+    "agents": [
+      {
+        "agent_id": 0,
+        "role": "boundary",
+        "check_role": "boundary",
+        "step": {
+          "text": "```json\n[\n  [1, 6, false],\n  [1, 1, false],\n  [1, 1, false],\n  [4, 1, true],\n  [6, 4, false",
+          "call_id": "f7de9d78fdccf55a6052f06f4a9c79bca4c238610eee86624ef3e44479bc3bc8"
+        },
+        "initial": {
+          "text": "Yes",
+          "call_id": "4e7c783a0fde83aa05957519dc4a893af2ecccad2ae7086d435f223526ee07a2"
+        },
+        "private": {
+          "text": "Yes",
+          "call_id": "5ee4f7fbf9af3678d05e6d767b66cbf431261cfba4fe87d2ed74ec5fc81cd138"
+        },
+        "peer": {
+          "text": "Yes",
+          "call_id": "ce10d6dc01fbe3f0da297dece4484330dcd03d21f9f651d96b53eaeb6c995dc4"
+        }
+      },
+      {
+        "agent_id": 1,
+        "role": "invariant",
+        "check_role": "invariant",
+        "step": {
+          "text": "[2, 2]",
+          "call_id": "c341d648682fb0728e34dcb78cfe546087611635a243685ecb0bbf46afcfa43f"
+        },
+        "initial": {
+          "text": "Yes",
+          "call_id": "cc98f966a2c396dea1d9ac947e6f50574e8c4002ac30e4cad9f21195e665885e"
+        },
+        "private": {
+          "text": "Yes",
+          "call_id": "f6c0d6e44e2535f74b046bca7230c8b8dc8aa12b36a7bba05459793d8c8ede00"
+        },
+        "peer": {
+          "text": "Yes",
+          "call_id": "f3571700042997f48d34175322a7de15bed21d84ff974d2ce93cef1db5e170a4"
+        }
+      },
+      {
+        "agent_id": 2,
+        "role": "simulation",
+        "check_role": "simulation",
+        "step": {
+          "text": "```json\n[1, 0]\n```",
+          "call_id": "f22f5329cbf3f3152def78b713b96f7267e02d76a3cb6a0f034ef07a4e1e0d3b"
+        },
+        "initial": {
+          "text": "Unknown",
+          "call_id": "4dc87a72fc0c3997cee65a090016912f0a75a7b14f0a15ecf21d39e899780b02"
+        },
+        "private": {
+          "text": "No",
+          "call_id": "22fa709688ec1937c892bf637db804801fe45dc8cde4b743f547dec6d86f2eb1"
+        },
+        "peer": {
+          "text": "No",
+          "call_id": "a246f008cb2aa93c770c5ca8b7ce1729eee0760b44022a97318213281b268bdf"
+        }
+      },
+      {
+        "agent_id": 3,
+        "role": "trace",
+        "check_role": "trace",
+        "step": {
+          "text": "```json\n[[1, 0], [1, 1]]\n```",
+          "call_id": "95ccedea4bc6c7bf362b0fffa786897b95c51fb9b7927980f624dda6663dceb9"
+        },
+        "initial": {
+          "text": "No",
+          "call_id": "9da01b0d6f429b773d3ca4c91d10645230f41eb371f2e6ae8305827b416f3c73"
+        },
+        "private": {
+          "text": "Yes",
+          "call_id": "d910b5cf50afc6730a3e7d43f985f3947190bf8e1c0119781e624aa14b0a3b40"
+        },
+        "peer": {
+          "text": "Yes",
+          "call_id": "9e438f653ab83af1304fa6fb25f2a941a5d599349547c3a2fe8559ef9660dd31"
+        }
+      }
+    ],
+    "branches": {
+      "initial": {
+        "labels": [
+          "yes",
+          "yes",
+          "unknown",
+          "no"
+        ],
+        "correct_agent_ids": [
+          3
+        ],
+        "winner": null,
+        "vote_correct": null
+      },
+      "private": {
+        "labels": [
+          "yes",
+          "yes",
+          "no",
+          "yes"
+        ],
+        "correct_agent_ids": [
+          2
+        ],
+        "winner": "yes",
+        "vote_correct": false
+      },
+      "peer": {
+        "labels": [
+          "yes",
+          "yes",
+          "no",
+          "yes"
+        ],
+        "correct_agent_ids": [
+          2
+        ],
+        "winner": "yes",
+        "vote_correct": false
+      }
+    }
+  },
+  "fresh_panels": {
+    "off": {
+      "gold": "no",
+      "agents": [
+        {
+          "agent_id": 0,
+          "role": "boundary",
+          "check_role": "boundary",
+          "step": {
+            "text": "```json\n[\n  [1, 6, false],\n  [1, 1, false],\n  [1, 1, false],\n  [4, 1, true],\n  [6, 4, false",
+            "call_id": "f7de9d78fdccf55a6052f06f4a9c79bca4c238610eee86624ef3e44479bc3bc8"
+          },
+          "initial": {
+            "text": "Yes",
+            "call_id": "4e7c783a0fde83aa05957519dc4a893af2ecccad2ae7086d435f223526ee07a2"
+          },
+          "private": {
+            "text": "Yes",
+            "call_id": "5ee4f7fbf9af3678d05e6d767b66cbf431261cfba4fe87d2ed74ec5fc81cd138"
+          },
+          "peer": {
+            "text": "Yes",
+            "call_id": "ce10d6dc01fbe3f0da297dece4484330dcd03d21f9f651d96b53eaeb6c995dc4"
+          }
+        },
+        {
+          "agent_id": 1,
+          "role": "invariant",
+          "check_role": "invariant",
+          "step": {
+            "text": "[2, 2]",
+            "call_id": "c341d648682fb0728e34dcb78cfe546087611635a243685ecb0bbf46afcfa43f"
+          },
+          "initial": {
+            "text": "Yes",
+            "call_id": "cc98f966a2c396dea1d9ac947e6f50574e8c4002ac30e4cad9f21195e665885e"
+          },
+          "private": {
+            "text": "Yes",
+            "call_id": "f6c0d6e44e2535f74b046bca7230c8b8dc8aa12b36a7bba05459793d8c8ede00"
+          },
+          "peer": {
+            "text": "Yes",
+            "call_id": "f3571700042997f48d34175322a7de15bed21d84ff974d2ce93cef1db5e170a4"
+          }
+        },
+        {
+          "agent_id": 2,
+          "role": "simulation",
+          "check_role": "simulation",
+          "step": {
+            "text": "```json\n[1, 0]\n```",
+            "call_id": "f22f5329cbf3f3152def78b713b96f7267e02d76a3cb6a0f034ef07a4e1e0d3b"
+          },
+          "initial": {
+            "text": "Unknown",
+            "call_id": "4dc87a72fc0c3997cee65a090016912f0a75a7b14f0a15ecf21d39e899780b02"
+          },
+          "private": {
+            "text": "No",
+            "call_id": "22fa709688ec1937c892bf637db804801fe45dc8cde4b743f547dec6d86f2eb1"
+          },
+          "peer": {
+            "text": "No",
+            "call_id": "a246f008cb2aa93c770c5ca8b7ce1729eee0760b44022a97318213281b268bdf"
+          }
+        },
+        {
+          "agent_id": 3,
+          "role": "trace",
+          "check_role": "trace",
+          "step": {
+            "text": "```json\n[[1, 0], [1, 1]]\n```",
+            "call_id": "95ccedea4bc6c7bf362b0fffa786897b95c51fb9b7927980f624dda6663dceb9"
+          },
+          "initial": {
+            "text": "No",
+            "call_id": "9da01b0d6f429b773d3ca4c91d10645230f41eb371f2e6ae8305827b416f3c73"
+          },
+          "private": {
+            "text": "Yes",
+            "call_id": "d910b5cf50afc6730a3e7d43f985f3947190bf8e1c0119781e624aa14b0a3b40"
+          },
+          "peer": {
+            "text": "Yes",
+            "call_id": "9e438f653ab83af1304fa6fb25f2a941a5d599349547c3a2fe8559ef9660dd31"
+          }
+        }
+      ],
+      "branches": {
+        "initial": {
+          "labels": [
+            "yes",
+            "yes",
+            "unknown",
+            "no"
+          ],
+          "correct_agent_ids": [
+            3
+          ],
+          "winner": null,
+          "vote_correct": null
+        },
+        "private": {
+          "labels": [
+            "yes",
+            "yes",
+            "no",
+            "yes"
+          ],
+          "correct_agent_ids": [
+            2
+          ],
+          "winner": "yes",
+          "vote_correct": false
+        },
+        "peer": {
+          "labels": [
+            "yes",
+            "yes",
+            "no",
+            "yes"
+          ],
+          "correct_agent_ids": [
+            2
+          ],
+          "winner": "yes",
+          "vote_correct": false
+        }
+      }
+    },
+    "on": {
+      "gold": "no",
+      "agents": [
+        {
+          "agent_id": 0,
+          "role": "boundary",
+          "check_role": "boundary",
+          "step": {
+            "text": "```json\n[\n  [1, 6, false],\n  [1, 1, false],\n  [1, 1, false],\n  [4, 1, true],\n  [6, 4, false",
+            "call_id": "f7de9d78fdccf55a6052f06f4a9c79bca4c238610eee86624ef3e44479bc3bc8"
+          },
+          "initial": {
+            "text": "Yes",
+            "call_id": "4e7c783a0fde83aa05957519dc4a893af2ecccad2ae7086d435f223526ee07a2"
+          },
+          "private": {
+            "text": "Yes",
+            "call_id": "5ee4f7fbf9af3678d05e6d767b66cbf431261cfba4fe87d2ed74ec5fc81cd138"
+          },
+          "peer": {
+            "text": "Yes",
+            "call_id": "ce10d6dc01fbe3f0da297dece4484330dcd03d21f9f651d96b53eaeb6c995dc4"
+          }
+        },
+        {
+          "agent_id": 1,
+          "role": "invariant",
+          "check_role": "invariant",
+          "step": {
+            "text": "[2, 2]",
+            "call_id": "c341d648682fb0728e34dcb78cfe546087611635a243685ecb0bbf46afcfa43f"
+          },
+          "initial": {
+            "text": "Yes",
+            "call_id": "cc98f966a2c396dea1d9ac947e6f50574e8c4002ac30e4cad9f21195e665885e"
+          },
+          "private": {
+            "text": "Yes",
+            "call_id": "f6c0d6e44e2535f74b046bca7230c8b8dc8aa12b36a7bba05459793d8c8ede00"
+          },
+          "peer": {
+            "text": "Yes",
+            "call_id": "f3571700042997f48d34175322a7de15bed21d84ff974d2ce93cef1db5e170a4"
+          }
+        },
+        {
+          "agent_id": 2,
+          "role": "simulation",
+          "check_role": "simulation",
+          "step": {
+            "text": "```json\n[1, 0]\n```",
+            "call_id": "f22f5329cbf3f3152def78b713b96f7267e02d76a3cb6a0f034ef07a4e1e0d3b"
+          },
+          "initial": {
+            "text": "Unknown",
+            "call_id": "4dc87a72fc0c3997cee65a090016912f0a75a7b14f0a15ecf21d39e899780b02"
+          },
+          "private": {
+            "text": "No",
+            "call_id": "22fa709688ec1937c892bf637db804801fe45dc8cde4b743f547dec6d86f2eb1"
+          },
+          "peer": {
+            "text": "No",
+            "call_id": "a246f008cb2aa93c770c5ca8b7ce1729eee0760b44022a97318213281b268bdf"
+          }
+        },
+        {
+          "agent_id": 3,
+          "role": "trace",
+          "check_role": "trace",
+          "step": {
+            "text": "```json\n[[1, 0], [1, 1]]\n```",
+            "call_id": "95ccedea4bc6c7bf362b0fffa786897b95c51fb9b7927980f624dda6663dceb9"
+          },
+          "initial": {
+            "text": "No",
+            "call_id": "9da01b0d6f429b773d3ca4c91d10645230f41eb371f2e6ae8305827b416f3c73"
+          },
+          "private": {
+            "text": "Yes",
+            "call_id": "d910b5cf50afc6730a3e7d43f985f3947190bf8e1c0119781e624aa14b0a3b40"
+          },
+          "peer": {
+            "text": "Yes",
+            "call_id": "9e438f653ab83af1304fa6fb25f2a941a5d599349547c3a2fe8559ef9660dd31"
+          }
+        }
+      ],
+      "branches": {
+        "initial": {
+          "labels": [
+            "yes",
+            "yes",
+            "unknown",
+            "no"
+          ],
+          "correct_agent_ids": [
+            3
+          ],
+          "winner": null,
+          "vote_correct": null
+        },
+        "private": {
+          "labels": [
+            "yes",
+            "yes",
+            "no",
+            "yes"
+          ],
+          "correct_agent_ids": [
+            2
+          ],
+          "winner": "yes",
+          "vote_correct": false
+        },
+        "peer": {
+          "labels": [
+            "yes",
+            "yes",
+            "no",
+            "yes"
+          ],
+          "correct_agent_ids": [
+            2
+          ],
+          "winner": "yes",
+          "vote_correct": false
+        }
+      }
+    }
+  },
+  "parity": {
+    "calls": 16,
+    "equal_counts": {
+      "request_equal": 16,
+      "prompt_ids_equal": 16,
+      "output_ids_equal": 16,
+      "text_equal": 16,
+      "response_equal": 16,
+      "parsed_equal": 16,
+      "logits_equal": 16
+    },
+    "by_call": [
+      {
+        "stage": "step",
+        "agent_id": 0,
+        "call_id": "f7de9d78fdccf55a6052f06f4a9c79bca4c238610eee86624ef3e44479bc3bc8",
+        "request_equal": true,
+        "prompt_ids_equal": true,
+        "output_ids_equal": true,
+        "text_equal": true,
+        "response_equal": true,
+        "parsed_equal": true,
+        "logits_equal": true,
+        "logits_max_abs_delta": 0.0
+      },
+      {
+        "stage": "step",
+        "agent_id": 1,
+        "call_id": "c341d648682fb0728e34dcb78cfe546087611635a243685ecb0bbf46afcfa43f",
+        "request_equal": true,
+        "prompt_ids_equal": true,
+        "output_ids_equal": true,
+        "text_equal": true,
+        "response_equal": true,
+        "parsed_equal": true,
+        "logits_equal": true,
+        "logits_max_abs_delta": 0.0
+      },
+      {
+        "stage": "step",
+        "agent_id": 2,
+        "call_id": "f22f5329cbf3f3152def78b713b96f7267e02d76a3cb6a0f034ef07a4e1e0d3b",
+        "request_equal": true,
+        "prompt_ids_equal": true,
+        "output_ids_equal": true,
+        "text_equal": true,
+        "response_equal": true,
+        "parsed_equal": true,
+        "logits_equal": true,
+        "logits_max_abs_delta": 0.0
+      },
+      {
+        "stage": "step",
+        "agent_id": 3,
+        "call_id": "95ccedea4bc6c7bf362b0fffa786897b95c51fb9b7927980f624dda6663dceb9",
+        "request_equal": true,
+        "prompt_ids_equal": true,
+        "output_ids_equal": true,
+        "text_equal": true,
+        "response_equal": true,
+        "parsed_equal": true,
+        "logits_equal": true,
+        "logits_max_abs_delta": 0.0
+      },
+      {
+        "stage": "initial",
+        "agent_id": 0,
+        "call_id": "4e7c783a0fde83aa05957519dc4a893af2ecccad2ae7086d435f223526ee07a2",
+        "request_equal": true,
+        "prompt_ids_equal": true,
+        "output_ids_equal": true,
+        "text_equal": true,
+        "response_equal": true,
+        "parsed_equal": true,
+        "logits_equal": true,
+        "logits_max_abs_delta": 0.0
+      },
+      {
+        "stage": "initial",
+        "agent_id": 1,
+        "call_id": "cc98f966a2c396dea1d9ac947e6f50574e8c4002ac30e4cad9f21195e665885e",
+        "request_equal": true,
+        "prompt_ids_equal": true,
+        "output_ids_equal": true,
+        "text_equal": true,
+        "response_equal": true,
+        "parsed_equal": true,
+        "logits_equal": true,
+        "logits_max_abs_delta": 0.0
+      },
+      {
+        "stage": "initial",
+        "agent_id": 2,
+        "call_id": "4dc87a72fc0c3997cee65a090016912f0a75a7b14f0a15ecf21d39e899780b02",
+        "request_equal": true,
+        "prompt_ids_equal": true,
+        "output_ids_equal": true,
+        "text_equal": true,
+        "response_equal": true,
+        "parsed_equal": true,
+        "logits_equal": true,
+        "logits_max_abs_delta": 0.0
+      },
+      {
+        "stage": "initial",
+        "agent_id": 3,
+        "call_id": "9da01b0d6f429b773d3ca4c91d10645230f41eb371f2e6ae8305827b416f3c73",
+        "request_equal": true,
+        "prompt_ids_equal": true,
+        "output_ids_equal": true,
+        "text_equal": true,
+        "response_equal": true,
+        "parsed_equal": true,
+        "logits_equal": true,
+        "logits_max_abs_delta": 0.0
+      },
+      {
+        "stage": "private",
+        "agent_id": 0,
+        "call_id": "5ee4f7fbf9af3678d05e6d767b66cbf431261cfba4fe87d2ed74ec5fc81cd138",
+        "request_equal": true,
+        "prompt_ids_equal": true,
+        "output_ids_equal": true,
+        "text_equal": true,
+        "response_equal": true,
+        "parsed_equal": true,
+        "logits_equal": true,
+        "logits_max_abs_delta": 0.0
+      },
+      {
+        "stage": "private",
+        "agent_id": 1,
+        "call_id": "f6c0d6e44e2535f74b046bca7230c8b8dc8aa12b36a7bba05459793d8c8ede00",
+        "request_equal": true,
+        "prompt_ids_equal": true,
+        "output_ids_equal": true,
+        "text_equal": true,
+        "response_equal": true,
+        "parsed_equal": true,
+        "logits_equal": true,
+        "logits_max_abs_delta": 0.0
+      },
+      {
+        "stage": "private",
+        "agent_id": 2,
+        "call_id": "22fa709688ec1937c892bf637db804801fe45dc8cde4b743f547dec6d86f2eb1",
+        "request_equal": true,
+        "prompt_ids_equal": true,
+        "output_ids_equal": true,
+        "text_equal": true,
+        "response_equal": true,
+        "parsed_equal": true,
+        "logits_equal": true,
+        "logits_max_abs_delta": 0.0
+      },
+      {
+        "stage": "private",
+        "agent_id": 3,
+        "call_id": "d910b5cf50afc6730a3e7d43f985f3947190bf8e1c0119781e624aa14b0a3b40",
+        "request_equal": true,
+        "prompt_ids_equal": true,
+        "output_ids_equal": true,
+        "text_equal": true,
+        "response_equal": true,
+        "parsed_equal": true,
+        "logits_equal": true,
+        "logits_max_abs_delta": 0.0
+      },
+      {
+        "stage": "peer",
+        "agent_id": 0,
+        "call_id": "ce10d6dc01fbe3f0da297dece4484330dcd03d21f9f651d96b53eaeb6c995dc4",
+        "request_equal": true,
+        "prompt_ids_equal": true,
+        "output_ids_equal": true,
+        "text_equal": true,
+        "response_equal": true,
+        "parsed_equal": true,
+        "logits_equal": true,
+        "logits_max_abs_delta": 0.0
+      },
+      {
+        "stage": "peer",
+        "agent_id": 1,
+        "call_id": "f3571700042997f48d34175322a7de15bed21d84ff974d2ce93cef1db5e170a4",
+        "request_equal": true,
+        "prompt_ids_equal": true,
+        "output_ids_equal": true,
+        "text_equal": true,
+        "response_equal": true,
+        "parsed_equal": true,
+        "logits_equal": true,
+        "logits_max_abs_delta": 0.0
+      },
+      {
+        "stage": "peer",
+        "agent_id": 2,
+        "call_id": "a246f008cb2aa93c770c5ca8b7ce1729eee0760b44022a97318213281b268bdf",
+        "request_equal": true,
+        "prompt_ids_equal": true,
+        "output_ids_equal": true,
+        "text_equal": true,
+        "response_equal": true,
+        "parsed_equal": true,
+        "logits_equal": true,
+        "logits_max_abs_delta": 0.0
+      },
+      {
+        "stage": "peer",
+        "agent_id": 3,
+        "call_id": "9e438f653ab83af1304fa6fb25f2a941a5d599349547c3a2fe8559ef9660dd31",
+        "request_equal": true,
+        "prompt_ids_equal": true,
+        "output_ids_equal": true,
+        "text_equal": true,
+        "response_equal": true,
+        "parsed_equal": true,
+        "logits_equal": true,
+        "logits_max_abs_delta": 0.0
+      }
+    ],
+    "panels_equal": true,
+    "summaries_equal": true
+  },
+  "fresh_calls": {
+    "off": [
+      {
+        "call_id": "f7de9d78fdccf55a6052f06f4a9c79bca4c238610eee86624ef3e44479bc3bc8",
+        "stage": "step",
+        "agent_id": 0,
+        "role": "boundary",
+        "seed": 592093970331763709,
+        "request_sha256": "8215ccc23389623f0a7ca1dbcdf7fb0b6e48c1f85dc6a32aa63d84b7bf1d1cd6",
+        "prompt_tokens": 576,
+        "prompt_tokens_sha256": "e55df214edd3142bce0447a60249510bab5a09324138c935a94712d693e60056",
+        "anchor_token_id": 198,
+        "text": "```json\n[\n  [1, 6, false],\n  [1, 1, false],\n  [1, 1, false],\n  [4, 1, true],\n  [6, 4, false",
+        "parsed": null,
+        "generated_token_ids": [
+          73594,
+          2236,
+          198,
+          9640,
+          220,
+          508,
+          16,
+          11,
+          220,
+          21,
+          11,
+          895,
+          1259,
+          220,
+          508,
+          16,
+          11,
+          220,
+          16,
+          11,
+          895,
+          1259,
+          220,
+          508,
+          16,
+          11,
+          220,
+          16,
+          11,
+          895,
+          1259,
+          220,
+          508,
+          19,
+          11,
+          220,
+          16,
+          11,
+          830,
+          1259,
+          220,
+          508,
+          21,
+          11,
+          220,
+          19,
+          11,
+          895
+        ],
+        "stop_reason": "length",
+        "sampled_token_logprobs": [
+          -0.01800575235745971,
+          0.0,
+          0.0,
+          -0.025361922507751846,
+          -0.09630789286392966,
+          -0.0020704230210173715,
+          -0.14713412767289907,
+          0.0,
+          0.0,
+          -0.023051647600707822,
+          0.0,
+          -0.4662645954381306,
+          -4.768372718899988e-07,
+          0.0,
+          0.0,
+          -0.0015975473913026374,
+          0.0,
+          0.0,
+          -0.6753660425359818,
+          0.0,
+          -0.05009170933073417,
+          -5.364432418327013e-06,
+          0.0,
+          0.0,
+          -0.0036388002541219537,
+          0.0,
+          0.0,
+          -0.14981530000809568,
+          0.0,
+          -0.0016497862050815042,
+          -0.00826438470487948,
+          0.0,
+          0.0,
+          -0.23110734956829337,
+          0.0,
+          0.0,
+          -0.0031866487048391795,
+          0.0,
+          -0.2760855006915917,
+          -0.10120415168693093,
+          0.0,
+          0.0,
+          -0.0007909086941412658,
+          0.0,
+          0.0,
+          -0.07142494576166049,
+          0.0,
+          -0.19029916481164738
+        ],
+        "logits_sha256": "ee099739cb07c459d71c538300761b2a72da1cfe74b211534d66ec2a6b4c08b2",
+        "layer_vector_sha256": null,
+        "token_scores": null
+      },
+      {
+        "call_id": "c341d648682fb0728e34dcb78cfe546087611635a243685ecb0bbf46afcfa43f",
+        "stage": "step",
+        "agent_id": 1,
+        "role": "invariant",
+        "seed": 1043261338822295663,
+        "request_sha256": "780808876af8732064e56827a5b83e26b4ba318f4e6a68e45b1246511e82ce87",
+        "prompt_tokens": 575,
+        "prompt_tokens_sha256": "fec15206ba6d85a516b0d64e761a3e7bd04abd6c2cd7575124a9f62497c58baf",
+        "anchor_token_id": 198,
+        "text": "[2, 2]",
+        "parsed": [
+          2,
+          2
+        ],
+        "generated_token_ids": [
+          58,
+          17,
+          11,
+          220,
+          17,
+          60,
+          151645
+        ],
+        "stop_reason": "eos",
+        "sampled_token_logprobs": [
+          -0.043051976680821905,
+          -0.26205032244423315,
+          0.0,
+          -1.1920929665620916e-07,
+          -1.1236163870143163,
+          0.0,
+          0.0
+        ],
+        "logits_sha256": "e42b6c034503ed7848787bb77d0005fb7f85b1a4a43a2c605c79b4828cf35495",
+        "layer_vector_sha256": null,
+        "token_scores": null
+      },
+      {
+        "call_id": "f22f5329cbf3f3152def78b713b96f7267e02d76a3cb6a0f034ef07a4e1e0d3b",
+        "stage": "step",
+        "agent_id": 2,
+        "role": "simulation",
+        "seed": 426764701601390746,
+        "request_sha256": "ca47f3c237b3d8fe7d0e4d515e7ae0f7c0c62b58386a43d25a2b1e6e608eaea5",
+        "prompt_tokens": 575,
+        "prompt_tokens_sha256": "f84587e94168192bc2e77286be167ef87ec22409ecdb4df661f1c44c4c4af68d",
+        "anchor_token_id": 198,
+        "text": "```json\n[1, 0]\n```",
+        "parsed": [
+          1,
+          0
+        ],
+        "generated_token_ids": [
+          73594,
+          2236,
+          198,
+          58,
+          16,
+          11,
+          220,
+          15,
+          921,
+          73594,
+          151645
+        ],
+        "stop_reason": "eos",
+        "sampled_token_logprobs": [
+          -0.0041394556432337,
+          0.0,
+          0.0,
+          -0.07885999686618962,
+          -0.08950687262746337,
+          0.0,
+          0.0,
+          -0.6183080671590989,
+          -2.3841886331910857e-06,
+          0.0,
+          0.0
+        ],
+        "logits_sha256": "c4578fdcba51d8c4651725a61d47293d31963e07166351db96f6b6bdb0ca6651",
+        "layer_vector_sha256": null,
+        "token_scores": null
+      },
+      {
+        "call_id": "95ccedea4bc6c7bf362b0fffa786897b95c51fb9b7927980f624dda6663dceb9",
+        "stage": "step",
+        "agent_id": 3,
+        "role": "trace",
+        "seed": 776498382668742209,
+        "request_sha256": "f71bf529e4d065be7d2b4917a478f28542be2e7bd2a83adda740cbacbe655086",
+        "prompt_tokens": 574,
+        "prompt_tokens_sha256": "571b8e12682c2b1bb60914f9bbacdf55473be2ed6136a034fde3a9fff436fc9f",
+        "anchor_token_id": 198,
+        "text": "```json\n[[1, 0], [1, 1]]\n```",
+        "parsed": [
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "generated_token_ids": [
+          73594,
+          2236,
+          198,
+          15505,
+          16,
+          11,
+          220,
+          15,
+          1125,
+          508,
+          16,
+          11,
+          220,
+          16,
+          14288,
+          73594,
+          151645
+        ],
+        "stop_reason": "eos",
+        "sampled_token_logprobs": [
+          -0.0013692808674176965,
+          0.0,
+          0.0,
+          -0.6717783138710487,
+          -0.7869422202500721,
+          -3.576279326012052e-07,
+          -0.00015593790841610634,
+          -0.009146670663028702,
+          -0.0018310611271478406,
+          0.0,
+          -0.00010812867131664133,
+          0.0,
+          0.0,
+          -0.021252523751576442,
+          -1.1920929665620916e-07,
+          0.0,
+          0.0
+        ],
+        "logits_sha256": "563b89ebdb41a5971130d62bbbfb969d3963fd9c4a0b9beaa555299a76b9edd1",
+        "layer_vector_sha256": null,
+        "token_scores": null
+      },
+      {
+        "call_id": "4e7c783a0fde83aa05957519dc4a893af2ecccad2ae7086d435f223526ee07a2",
+        "stage": "initial",
+        "agent_id": 0,
+        "role": "boundary",
+        "seed": 924793350851983637,
+        "request_sha256": "4941dd3521dcde1ef88440b591d51c54b85a7a5a33cca501bdc93251854557b9",
+        "prompt_tokens": 706,
+        "prompt_tokens_sha256": "1cb1f965d67b252dc0ad9fed83446271b55f5f8792cc49e53a88f97a49f29a7d",
+        "anchor_token_id": 198,
+        "text": "Yes",
+        "parsed": "yes",
+        "generated_token_ids": [
+          9454,
+          151645
+        ],
+        "stop_reason": "eos",
+        "sampled_token_logprobs": [
+          -0.6506293896081558,
+          -6.3181123054209235e-06
+        ],
+        "logits_sha256": "9a2ae32e8a11ac06c61f7de0e588bbecd313ff665c5f897d575c7a4bd22caf56",
+        "layer_vector_sha256": null,
+        "token_scores": {
+          "labels": {
+            "Yes": {
+              "token_id": 9454,
+              "logit": 19.296875,
+              "probability": 0.5217182636260986,
+              "rank": 1
+            },
+            "No": {
+              "token_id": 2753,
+              "logit": 19.125,
+              "probability": 0.2941852807998657,
+              "rank": 2
+            },
+            "Unknown": {
+              "token_id": 13790,
+              "logit": 18.984375,
+              "probability": 0.18409644067287445,
+              "rank": 3
+            },
+            " Yes": {
+              "token_id": 7414,
+              "logit": 11.2578125,
+              "probability": 1.2014371702367965e-12,
+              "rank": 9
+            },
+            " No": {
+              "token_id": 2308,
+              "logit": 10.1640625,
+              "probability": 3.1357132602299886e-14,
+              "rank": 22
+            },
+            " Unknown": {
+              "token_id": 21693,
+              "logit": 11.265625,
+              "probability": 1.2331372901963622e-12,
+              "rank": 8
+            }
+          },
+          "top3": [
+            {
+              "token_id": 9454,
+              "logit": 19.296875,
+              "probability": 0.5217182636260986,
+              "rank": 1,
+              "text": "Yes"
+            },
+            {
+              "token_id": 2753,
+              "logit": 19.125,
+              "probability": 0.2941852807998657,
+              "rank": 2,
+              "text": "No"
+            },
+            {
+              "token_id": 13790,
+              "logit": 18.984375,
+              "probability": 0.18409644067287445,
+              "rank": 3,
+              "text": "Unknown"
+            }
+          ],
+          "yes_minus_no_logit": 0.171875,
+          "first_generated_token": {
+            "token_id": 9454,
+            "logit": 19.296875,
+            "probability": 0.5217182636260986,
+            "rank": 1
+          }
+        }
+      },
+      {
+        "call_id": "cc98f966a2c396dea1d9ac947e6f50574e8c4002ac30e4cad9f21195e665885e",
+        "stage": "initial",
+        "agent_id": 1,
+        "role": "invariant",
+        "seed": 71137088538748202,
+        "request_sha256": "f4e57aaa67e1bcec4de267d5d24fa54de2f7b05ba04a100533128920589967eb",
+        "prompt_tokens": 663,
+        "prompt_tokens_sha256": "da1332285810b7d6368f963a68abf352ac6dd39851c00b36d9f9808daf794b45",
+        "anchor_token_id": 198,
+        "text": "Yes",
+        "parsed": "yes",
+        "generated_token_ids": [
+          9454,
+          151645
+        ],
+        "stop_reason": "eos",
+        "sampled_token_logprobs": [
+          -0.7145949205165237,
+          -8.583105682402442e-06
+        ],
+        "logits_sha256": "2a34026f8954d95b2c3f819cba629b9fac3c1a63a6af6fbbb4b9fad391abecc4",
+        "layer_vector_sha256": null,
+        "token_scores": {
+          "labels": {
+            "Yes": {
+              "token_id": 9454,
+              "logit": 19.109375,
+              "probability": 0.4893903136253357,
+              "rank": 1
+            },
+            "No": {
+              "token_id": 2753,
+              "logit": 18.921875,
+              "probability": 0.2619517743587494,
+              "rank": 2
+            },
+            "Unknown": {
+              "token_id": 13790,
+              "logit": 18.90625,
+              "probability": 0.2486579567193985,
+              "rank": 3
+            },
+            " Yes": {
+              "token_id": 7414,
+              "logit": 10.9765625,
+              "probability": 8.245242054220892e-13,
+              "rank": 13
+            },
+            " No": {
+              "token_id": 2308,
+              "logit": 9.8984375,
+              "probability": 2.2670316755031734e-14,
+              "rank": 24
+            },
+            " Unknown": {
+              "token_id": 21693,
+              "logit": 11.078125,
+              "probability": 1.1567266242074048e-12,
+              "rank": 8
+            }
+          },
+          "top3": [
+            {
+              "token_id": 9454,
+              "logit": 19.109375,
+              "probability": 0.4893903136253357,
+              "rank": 1,
+              "text": "Yes"
+            },
+            {
+              "token_id": 2753,
+              "logit": 18.921875,
+              "probability": 0.2619517743587494,
+              "rank": 2,
+              "text": "No"
+            },
+            {
+              "token_id": 13790,
+              "logit": 18.90625,
+              "probability": 0.2486579567193985,
+              "rank": 3,
+              "text": "Unknown"
+            }
+          ],
+          "yes_minus_no_logit": 0.1875,
+          "first_generated_token": {
+            "token_id": 9454,
+            "logit": 19.109375,
+            "probability": 0.4893903136253357,
+            "rank": 1
+          }
+        }
+      },
+      {
+        "call_id": "4dc87a72fc0c3997cee65a090016912f0a75a7b14f0a15ecf21d39e899780b02",
+        "stage": "initial",
+        "agent_id": 2,
+        "role": "simulation",
+        "seed": 233128483962487081,
+        "request_sha256": "5f2cbad712d4b8d2a6a9f423b298d83dd3b5a7a7ad0b8f651b0d44916a7ca79b",
+        "prompt_tokens": 667,
+        "prompt_tokens_sha256": "4b107c54f94e41f34b6ed5e5abb03af3cf80cdaf9468a42440ce77e4fbf7807c",
+        "anchor_token_id": 198,
+        "text": "Unknown",
+        "parsed": "unknown",
+        "generated_token_ids": [
+          13790,
+          151645
+        ],
+        "stop_reason": "eos",
+        "sampled_token_logprobs": [
+          -1.3987824759461427,
+          -8.046950803079586e-05
+        ],
+        "logits_sha256": "7e4913e01ce066e82149976b90d27d98deb1180d172c0474879f2a7dfae9451b",
+        "layer_vector_sha256": null,
+        "token_scores": {
+          "labels": {
+            "Yes": {
+              "token_id": 9454,
+              "logit": 19.109375,
+              "probability": 0.4156339168548584,
+              "rank": 1
+            },
+            "No": {
+              "token_id": 2753,
+              "logit": 19.046875,
+              "probability": 0.3374687135219574,
+              "rank": 2
+            },
+            "Unknown": {
+              "token_id": 13790,
+              "logit": 18.953125,
+              "probability": 0.2468973845243454,
+              "rank": 3
+            },
+            " Yes": {
+              "token_id": 7414,
+              "logit": 11.015625,
+              "probability": 7.976436351697647e-13,
+              "rank": 9
+            },
+            " No": {
+              "token_id": 2308,
+              "logit": 10.0390625,
+              "probability": 3.07672554697002e-14,
+              "rank": 21
+            },
+            " Unknown": {
+              "token_id": 21693,
+              "logit": 11.171875,
+              "probability": 1.3427752833250484e-12,
+              "rank": 7
+            }
+          },
+          "top3": [
+            {
+              "token_id": 9454,
+              "logit": 19.109375,
+              "probability": 0.4156339168548584,
+              "rank": 1,
+              "text": "Yes"
+            },
+            {
+              "token_id": 2753,
+              "logit": 19.046875,
+              "probability": 0.3374687135219574,
+              "rank": 2,
+              "text": "No"
+            },
+            {
+              "token_id": 13790,
+              "logit": 18.953125,
+              "probability": 0.2468973845243454,
+              "rank": 3,
+              "text": "Unknown"
+            }
+          ],
+          "yes_minus_no_logit": 0.0625,
+          "first_generated_token": {
+            "token_id": 13790,
+            "logit": 18.953125,
+            "probability": 0.2468973845243454,
+            "rank": 3
+          }
+        }
+      },
+      {
+        "call_id": "9da01b0d6f429b773d3ca4c91d10645230f41eb371f2e6ae8305827b416f3c73",
+        "stage": "initial",
+        "agent_id": 3,
+        "role": "trace",
+        "seed": 839793943881852345,
+        "request_sha256": "02c620a7cb3599f7dfb31f9c34952a39fdb0360ce18fcc95fcd2fedf4e9448b4",
+        "prompt_tokens": 672,
+        "prompt_tokens_sha256": "f3912df7a8f1e0a493f2ddef86b0dc0838b01b2346581e4f6bcc3dbbf06f39ec",
+        "anchor_token_id": 198,
+        "text": "No",
+        "parsed": "no",
+        "generated_token_ids": [
+          2753,
+          151645
+        ],
+        "stop_reason": "eos",
+        "sampled_token_logprobs": [
+          -1.0338726816781816,
+          -1.0013630458495755e-05
+        ],
+        "logits_sha256": "5e616b80169d7a8e08a265eace1e51b7fd729db92cef7bf9f908f5da7bde815f",
+        "layer_vector_sha256": null,
+        "token_scores": {
+          "labels": {
+            "Yes": {
+              "token_id": 9454,
+              "logit": 19.125,
+              "probability": 0.3556267023086548,
+              "rank": 1
+            },
+            "No": {
+              "token_id": 2753,
+              "logit": 19.125,
+              "probability": 0.3556267023086548,
+              "rank": 1
+            },
+            "Unknown": {
+              "token_id": 13790,
+              "logit": 19.0625,
+              "probability": 0.2887466251850128,
+              "rank": 3
+            },
+            " Yes": {
+              "token_id": 7414,
+              "logit": 10.9921875,
+              "probability": 5.991617250088177e-13,
+              "rank": 11
+            },
+            " No": {
+              "token_id": 2308,
+              "logit": 10.078125,
+              "probability": 2.8464467653581405e-14,
+              "rank": 22
+            },
+            " Unknown": {
+              "token_id": 21693,
+              "logit": 11.2265625,
+              "probability": 1.3086893764849283e-12,
+              "rank": 7
+            }
+          },
+          "top3": [
+            {
+              "token_id": 2753,
+              "logit": 19.125,
+              "probability": 0.3556267023086548,
+              "rank": 1,
+              "text": "No"
+            },
+            {
+              "token_id": 9454,
+              "logit": 19.125,
+              "probability": 0.3556267023086548,
+              "rank": 1,
+              "text": "Yes"
+            },
+            {
+              "token_id": 13790,
+              "logit": 19.0625,
+              "probability": 0.2887466251850128,
+              "rank": 3,
+              "text": "Unknown"
+            }
+          ],
+          "yes_minus_no_logit": 0.0,
+          "first_generated_token": {
+            "token_id": 2753,
+            "logit": 19.125,
+            "probability": 0.3556267023086548,
+            "rank": 1
+          }
+        }
+      },
+      {
+        "call_id": "5ee4f7fbf9af3678d05e6d767b66cbf431261cfba4fe87d2ed74ec5fc81cd138",
+        "stage": "private",
+        "agent_id": 0,
+        "role": "boundary",
+        "seed": 796935447154623670,
+        "request_sha256": "60bd679ff0a51dd338b84835d291018a43739ecc4794581015317fff1ba30e9c",
+        "prompt_tokens": 748,
+        "prompt_tokens_sha256": "ad3a7318598c5e4d9a4ef4a8fe3bbd6838eca4987a15bd297e8c610024f256e0",
+        "anchor_token_id": 198,
+        "text": "Yes",
+        "parsed": "yes",
+        "generated_token_ids": [
+          9454,
+          151645
+        ],
+        "stop_reason": "eos",
+        "sampled_token_logprobs": [
+          -0.04210023551738776,
+          0.0
+        ],
+        "logits_sha256": "ed41e8a643a24f2c07ec19ecd2d3b76ee8a0c5eadc309467f2437aaf12677860",
+        "layer_vector_sha256": null,
+        "token_scores": {
+          "labels": {
+            "Yes": {
+              "token_id": 9454,
+              "logit": 19.65625,
+              "probability": 0.958773672580719,
+              "rank": 1
+            },
+            "No": {
+              "token_id": 2753,
+              "logit": 18.578125,
+              "probability": 0.026361610740423203,
+              "rank": 2
+            },
+            "Unknown": {
+              "token_id": 13790,
+              "logit": 18.40625,
+              "probability": 0.0148647241294384,
+              "rank": 3
+            },
+            " Yes": {
+              "token_id": 7414,
+              "logit": 11.484375,
+              "probability": 1.4181349237279983e-12,
+              "rank": 7
+            },
+            " No": {
+              "token_id": 2308,
+              "logit": 9.59375,
+              "probability": 2.59870195261564e-15,
+              "rank": 27
+            },
+            " Unknown": {
+              "token_id": 21693,
+              "logit": 10.609375,
+              "probability": 7.674052772367254e-14,
+              "rank": 15
+            }
+          },
+          "top3": [
+            {
+              "token_id": 9454,
+              "logit": 19.65625,
+              "probability": 0.958773672580719,
+              "rank": 1,
+              "text": "Yes"
+            },
+            {
+              "token_id": 2753,
+              "logit": 18.578125,
+              "probability": 0.026361610740423203,
+              "rank": 2,
+              "text": "No"
+            },
+            {
+              "token_id": 13790,
+              "logit": 18.40625,
+              "probability": 0.0148647241294384,
+              "rank": 3,
+              "text": "Unknown"
+            }
+          ],
+          "yes_minus_no_logit": 1.078125,
+          "first_generated_token": {
+            "token_id": 9454,
+            "logit": 19.65625,
+            "probability": 0.958773672580719,
+            "rank": 1
+          }
+        }
+      },
+      {
+        "call_id": "f6c0d6e44e2535f74b046bca7230c8b8dc8aa12b36a7bba05459793d8c8ede00",
+        "stage": "private",
+        "agent_id": 1,
+        "role": "invariant",
+        "seed": 725658350378146381,
+        "request_sha256": "3ae4d0a9af129b273fb093fedb75e0f0b4d803572c3fd4b6edfeb8635d05fbef",
+        "prompt_tokens": 705,
+        "prompt_tokens_sha256": "b4625ae59112d558a3260254c5d1ccdb63cdadde9270100ba07e9dc189913488",
+        "anchor_token_id": 198,
+        "text": "Yes",
+        "parsed": "yes",
+        "generated_token_ids": [
+          9454,
+          151645
+        ],
+        "stop_reason": "eos",
+        "sampled_token_logprobs": [
+          -0.055795357544671124,
+          0.0
+        ],
+        "logits_sha256": "914f9ed6dad85c73f1ece94d00192a53ae8c3b03389357d32cb40eaecf6c4018",
+        "layer_vector_sha256": null,
+        "token_scores": {
+          "labels": {
+            "Yes": {
+              "token_id": 9454,
+              "logit": 19.640625,
+              "probability": 0.9457327723503113,
+              "rank": 1
+            },
+            "No": {
+              "token_id": 2753,
+              "logit": 18.625,
+              "probability": 0.03202580660581589,
+              "rank": 2
+            },
+            "Unknown": {
+              "token_id": 13790,
+              "logit": 18.515625,
+              "probability": 0.022241419181227684,
+              "rank": 3
+            },
+            " Yes": {
+              "token_id": 7414,
+              "logit": 11.4140625,
+              "probability": 1.1657339590159799e-12,
+              "rank": 7
+            },
+            " No": {
+              "token_id": 2308,
+              "logit": 9.6015625,
+              "probability": 2.7716372813247616e-15,
+              "rank": 29
+            },
+            " Unknown": {
+              "token_id": 21693,
+              "logit": 10.6484375,
+              "probability": 9.083278427373179e-14,
+              "rank": 16
+            }
+          },
+          "top3": [
+            {
+              "token_id": 9454,
+              "logit": 19.640625,
+              "probability": 0.9457327723503113,
+              "rank": 1,
+              "text": "Yes"
+            },
+            {
+              "token_id": 2753,
+              "logit": 18.625,
+              "probability": 0.03202580660581589,
+              "rank": 2,
+              "text": "No"
+            },
+            {
+              "token_id": 13790,
+              "logit": 18.515625,
+              "probability": 0.022241419181227684,
+              "rank": 3,
+              "text": "Unknown"
+            }
+          ],
+          "yes_minus_no_logit": 1.015625,
+          "first_generated_token": {
+            "token_id": 9454,
+            "logit": 19.640625,
+            "probability": 0.9457327723503113,
+            "rank": 1
+          }
+        }
+      },
+      {
+        "call_id": "22fa709688ec1937c892bf637db804801fe45dc8cde4b743f547dec6d86f2eb1",
+        "stage": "private",
+        "agent_id": 2,
+        "role": "simulation",
+        "seed": 182211423270019531,
+        "request_sha256": "d1efa89d0dd1431b46901bcb93be02d7a7ea36b9a9f736284be2798ce02f4955",
+        "prompt_tokens": 709,
+        "prompt_tokens_sha256": "0109044ecf9041c9d09b038be330ac85a3a31e4ec2a65a8b59792828b6c14273",
+        "anchor_token_id": 198,
+        "text": "No",
+        "parsed": "no",
+        "generated_token_ids": [
+          2753,
+          151645
+        ],
+        "stop_reason": "eos",
+        "sampled_token_logprobs": [
+          -2.175081210631422,
+          -3.576279326012052e-07
+        ],
+        "logits_sha256": "35ae40cbb34a8786b11c0db37a83f309ee27816dc2ad4594a85a2bea75811f4d",
+        "layer_vector_sha256": null,
+        "token_scores": {
+          "labels": {
+            "Yes": {
+              "token_id": 9454,
+              "logit": 19.5,
+              "probability": 0.8660343885421753,
+              "rank": 1
+            },
+            "No": {
+              "token_id": 2753,
+              "logit": 18.890625,
+              "probability": 0.11359856277704239,
+              "rank": 2
+            },
+            "Unknown": {
+              "token_id": 13790,
+              "logit": 18.375,
+              "probability": 0.020367098972201347,
+              "rank": 3
+            },
+            " Yes": {
+              "token_id": 7414,
+              "logit": 11.4765625,
+              "probability": 2.100966753001976e-12,
+              "rank": 6
+            },
+            " No": {
+              "token_id": 2308,
+              "logit": 10.0234375,
+              "probability": 1.655027670628955e-14,
+              "rank": 19
+            },
+            " Unknown": {
+              "token_id": 21693,
+              "logit": 10.71875,
+              "probability": 1.6802450273148417e-13,
+              "rank": 13
+            }
+          },
+          "top3": [
+            {
+              "token_id": 9454,
+              "logit": 19.5,
+              "probability": 0.8660343885421753,
+              "rank": 1,
+              "text": "Yes"
+            },
+            {
+              "token_id": 2753,
+              "logit": 18.890625,
+              "probability": 0.11359856277704239,
+              "rank": 2,
+              "text": "No"
+            },
+            {
+              "token_id": 13790,
+              "logit": 18.375,
+              "probability": 0.020367098972201347,
+              "rank": 3,
+              "text": "Unknown"
+            }
+          ],
+          "yes_minus_no_logit": 0.609375,
+          "first_generated_token": {
+            "token_id": 2753,
+            "logit": 18.890625,
+            "probability": 0.11359856277704239,
+            "rank": 2
+          }
+        }
+      },
+      {
+        "call_id": "d910b5cf50afc6730a3e7d43f985f3947190bf8e1c0119781e624aa14b0a3b40",
+        "stage": "private",
+        "agent_id": 3,
+        "role": "trace",
+        "seed": 429618993130734582,
+        "request_sha256": "01ccc75259c0159c6616fbb79130e27b4133d027efcc744ce0a14dbeb90794b8",
+        "prompt_tokens": 714,
+        "prompt_tokens_sha256": "65e641aed309b4cbab451d7c49a27ebed06bd2735cfccc924bf2933facfc0a8c",
+        "anchor_token_id": 198,
+        "text": "Yes",
+        "parsed": "yes",
+        "generated_token_ids": [
+          9454,
+          151645
+        ],
+        "stop_reason": "eos",
+        "sampled_token_logprobs": [
+          -0.11362954805128406,
+          0.0
+        ],
+        "logits_sha256": "3aa3d6cd9de34d3ae60d9bd8a0a5f280412e9f87d8ab9ab749d4ff4413fb5613",
+        "layer_vector_sha256": null,
+        "token_scores": {
+          "labels": {
+            "Yes": {
+              "token_id": 9454,
+              "logit": 19.5,
+              "probability": 0.8925885558128357,
+              "rank": 1
+            },
+            "No": {
+              "token_id": 2753,
+              "logit": 18.765625,
+              "probability": 0.07718520611524582,
+              "rank": 2
+            },
+            "Unknown": {
+              "token_id": 13790,
+              "logit": 18.484375,
+              "probability": 0.03022615984082222,
+              "rank": 3
+            },
+            " Yes": {
+              "token_id": 7414,
+              "logit": 11.359375,
+              "probability": 1.465173468662151e-12,
+              "rank": 7
+            },
+            " No": {
+              "token_id": 2308,
+              "logit": 9.765625,
+              "probability": 7.222700763214254e-15,
+              "rank": 19
+            },
+            " Unknown": {
+              "token_id": 21693,
+              "logit": 10.6640625,
+              "probability": 1.4431838157250715e-13,
+              "rank": 13
+            }
+          },
+          "top3": [
+            {
+              "token_id": 9454,
+              "logit": 19.5,
+              "probability": 0.8925885558128357,
+              "rank": 1,
+              "text": "Yes"
+            },
+            {
+              "token_id": 2753,
+              "logit": 18.765625,
+              "probability": 0.07718520611524582,
+              "rank": 2,
+              "text": "No"
+            },
+            {
+              "token_id": 13790,
+              "logit": 18.484375,
+              "probability": 0.03022615984082222,
+              "rank": 3,
+              "text": "Unknown"
+            }
+          ],
+          "yes_minus_no_logit": 0.734375,
+          "first_generated_token": {
+            "token_id": 9454,
+            "logit": 19.5,
+            "probability": 0.8925885558128357,
+            "rank": 1
+          }
+        }
+      },
+      {
+        "call_id": "ce10d6dc01fbe3f0da297dece4484330dcd03d21f9f651d96b53eaeb6c995dc4",
+        "stage": "peer",
+        "agent_id": 0,
+        "role": "boundary",
+        "seed": 796935447154623670,
+        "request_sha256": "1873a3dca0b1a09d1b94983f6508ea2c8d210d3b16346c094d57085668d9f943",
+        "prompt_tokens": 775,
+        "prompt_tokens_sha256": "4244c5c6d5bad8fc78813eff3a6c6992f3965bc8471d3daa99e345fe250845a3",
+        "anchor_token_id": 198,
+        "text": "Yes",
+        "parsed": "yes",
+        "generated_token_ids": [
+          9454,
+          151645
+        ],
+        "stop_reason": "eos",
+        "sampled_token_logprobs": [
+          -0.035313542101587776,
+          0.0
+        ],
+        "logits_sha256": "87fde95145de2ed211cbe9fc5d451e3cd803cca56d6e15e75fc4bf501d2bb9ad",
+        "layer_vector_sha256": null,
+        "token_scores": {
+          "labels": {
+            "Yes": {
+              "token_id": 9454,
+              "logit": 20.078125,
+              "probability": 0.9653027057647705,
+              "rank": 1
+            },
+            "No": {
+              "token_id": 2753,
+              "logit": 19.046875,
+              "probability": 0.031029725447297096,
+              "rank": 2
+            },
+            "Unknown": {
+              "token_id": 13790,
+              "logit": 18.40625,
+              "probability": 0.0036675636656582355,
+              "rank": 3
+            },
+            " Yes": {
+              "token_id": 7414,
+              "logit": 11.9375,
+              "probability": 1.584538923682377e-12,
+              "rank": 4
+            },
+            " No": {
+              "token_id": 2308,
+              "logit": 10.078125,
+              "probability": 3.222426310029369e-15,
+              "rank": 19
+            },
+            " Unknown": {
+              "token_id": 21693,
+              "logit": 10.6796875,
+              "probability": 2.3934996237588713e-14,
+              "rank": 16
+            }
+          },
+          "top3": [
+            {
+              "token_id": 9454,
+              "logit": 20.078125,
+              "probability": 0.9653027057647705,
+              "rank": 1,
+              "text": "Yes"
+            },
+            {
+              "token_id": 2753,
+              "logit": 19.046875,
+              "probability": 0.031029725447297096,
+              "rank": 2,
+              "text": "No"
+            },
+            {
+              "token_id": 13790,
+              "logit": 18.40625,
+              "probability": 0.0036675636656582355,
+              "rank": 3,
+              "text": "Unknown"
+            }
+          ],
+          "yes_minus_no_logit": 1.03125,
+          "first_generated_token": {
+            "token_id": 9454,
+            "logit": 20.078125,
+            "probability": 0.9653027057647705,
+            "rank": 1
+          }
+        }
+      },
+      {
+        "call_id": "f3571700042997f48d34175322a7de15bed21d84ff974d2ce93cef1db5e170a4",
+        "stage": "peer",
+        "agent_id": 1,
+        "role": "invariant",
+        "seed": 725658350378146381,
+        "request_sha256": "361a83f8d297ab641586435722c2ce0e29b14065d1af55d40f59f0d72b5fa0de",
+        "prompt_tokens": 732,
+        "prompt_tokens_sha256": "ecc3e57d5360614360419d4a19d9758241289f3d3b17f4a1bc459aa30f74f5aa",
+        "anchor_token_id": 198,
+        "text": "Yes",
+        "parsed": "yes",
+        "generated_token_ids": [
+          9454,
+          151645
+        ],
+        "stop_reason": "eos",
+        "sampled_token_logprobs": [
+          -0.04331809380516843,
+          0.0
+        ],
+        "logits_sha256": "d1a4099b409f002bf798f2fe25d10a1143a62fcc34ab4578b00b7e3cd0ede77a",
+        "layer_vector_sha256": null,
+        "token_scores": {
+          "labels": {
+            "Yes": {
+              "token_id": 9454,
+              "logit": 20.078125,
+              "probability": 0.9576067328453064,
+              "rank": 1
+            },
+            "No": {
+              "token_id": 2753,
+              "logit": 19.109375,
+              "probability": 0.03791220486164093,
+              "rank": 2
+            },
+            "Unknown": {
+              "token_id": 13790,
+              "logit": 18.46875,
+              "probability": 0.004481039475649595,
+              "rank": 3
+            },
+            " Yes": {
+              "token_id": 7414,
+              "logit": 11.859375,
+              "probability": 1.2115187325578702e-12,
+              "rank": 4
+            },
+            " No": {
+              "token_id": 2308,
+              "logit": 10.046875,
+              "probability": 2.880494991090569e-15,
+              "rank": 20
+            },
+            " Unknown": {
+              "token_id": 21693,
+              "logit": 10.65625,
+              "probability": 2.195976961470031e-14,
+              "rank": 16
+            }
+          },
+          "top3": [
+            {
+              "token_id": 9454,
+              "logit": 20.078125,
+              "probability": 0.9576067328453064,
+              "rank": 1,
+              "text": "Yes"
+            },
+            {
+              "token_id": 2753,
+              "logit": 19.109375,
+              "probability": 0.03791220486164093,
+              "rank": 2,
+              "text": "No"
+            },
+            {
+              "token_id": 13790,
+              "logit": 18.46875,
+              "probability": 0.004481039475649595,
+              "rank": 3,
+              "text": "Unknown"
+            }
+          ],
+          "yes_minus_no_logit": 0.96875,
+          "first_generated_token": {
+            "token_id": 9454,
+            "logit": 20.078125,
+            "probability": 0.9576067328453064,
+            "rank": 1
+          }
+        }
+      },
+      {
+        "call_id": "a246f008cb2aa93c770c5ca8b7ce1729eee0760b44022a97318213281b268bdf",
+        "stage": "peer",
+        "agent_id": 2,
+        "role": "simulation",
+        "seed": 182211423270019531,
+        "request_sha256": "7dd781a99ef4f233c4a74df6e126391de03517822f975a51aeb90243da73f7e0",
+        "prompt_tokens": 736,
+        "prompt_tokens_sha256": "ad7661d225ad13e62fdf9d499c4b14ecd25ba5778a40609ddbf5dfc76e0c55fb",
+        "anchor_token_id": 198,
+        "text": "No",
+        "parsed": "no",
+        "generated_token_ids": [
+          2753,
+          151645
+        ],
+        "stop_reason": "eos",
+        "sampled_token_logprobs": [
+          -2.0014099165444823,
+          0.0
+        ],
+        "logits_sha256": "44f29b59484e35d34ca87e644fc7054ca00261215cb4e6f915d387001efe8a87",
+        "layer_vector_sha256": null,
+        "token_scores": {
+          "labels": {
+            "Yes": {
+              "token_id": 9454,
+              "logit": 19.375,
+              "probability": 0.8365275859832764,
+              "rank": 1
+            },
+            "No": {
+              "token_id": 2753,
+              "logit": 18.828125,
+              "probability": 0.13514460623264313,
+              "rank": 2
+            },
+            "Unknown": {
+              "token_id": 13790,
+              "logit": 18.359375,
+              "probability": 0.02832784876227379,
+              "rank": 3
+            },
+            " Yes": {
+              "token_id": 7414,
+              "logit": 11.46875,
+              "probability": 2.999246901183583e-12,
+              "rank": 6
+            },
+            " No": {
+              "token_id": 2308,
+              "logit": 10.0234375,
+              "probability": 2.424982483155598e-14,
+              "rank": 18
+            },
+            " Unknown": {
+              "token_id": 21693,
+              "logit": 10.75,
+              "probability": 2.7322195612737576e-13,
+              "rank": 10
+            }
+          },
+          "top3": [
+            {
+              "token_id": 9454,
+              "logit": 19.375,
+              "probability": 0.8365275859832764,
+              "rank": 1,
+              "text": "Yes"
+            },
+            {
+              "token_id": 2753,
+              "logit": 18.828125,
+              "probability": 0.13514460623264313,
+              "rank": 2,
+              "text": "No"
+            },
+            {
+              "token_id": 13790,
+              "logit": 18.359375,
+              "probability": 0.02832784876227379,
+              "rank": 3,
+              "text": "Unknown"
+            }
+          ],
+          "yes_minus_no_logit": 0.546875,
+          "first_generated_token": {
+            "token_id": 2753,
+            "logit": 18.828125,
+            "probability": 0.13514460623264313,
+            "rank": 2
+          }
+        }
+      },
+      {
+        "call_id": "9e438f653ab83af1304fa6fb25f2a941a5d599349547c3a2fe8559ef9660dd31",
+        "stage": "peer",
+        "agent_id": 3,
+        "role": "trace",
+        "seed": 429618993130734582,
+        "request_sha256": "4e4a6dec1158220ef124f8436e56b40ddb68d0e73af76b5b781f86ca339cb402",
+        "prompt_tokens": 741,
+        "prompt_tokens_sha256": "f9228685b86aa377ecc2a96e3fd3c2d561b9ba5e26bac7a4faf3081332bd3a81",
+        "anchor_token_id": 198,
+        "text": "Yes",
+        "parsed": "yes",
+        "generated_token_ids": [
+          9454,
+          151645
+        ],
+        "stop_reason": "eos",
+        "sampled_token_logprobs": [
+          -0.15410741772507708,
+          0.0
+        ],
+        "logits_sha256": "542020058603031c115578a1932229b3f58ce7c3ca62b14ce6a8ae2cfac2d41a",
+        "layer_vector_sha256": null,
+        "token_scores": {
+          "labels": {
+            "Yes": {
+              "token_id": 9454,
+              "logit": 19.765625,
+              "probability": 0.8571799993515015,
+              "rank": 1
+            },
+            "No": {
+              "token_id": 2753,
+              "logit": 19.203125,
+              "probability": 0.13145281374454498,
+              "rank": 2
+            },
+            "Unknown": {
+              "token_id": 13790,
+              "logit": 18.46875,
+              "probability": 0.011367176659405231,
+              "rank": 3
+            },
+            " Yes": {
+              "token_id": 7414,
+              "logit": 11.6640625,
+              "probability": 1.6027271740673421e-12,
+              "rank": 6
+            },
+            " No": {
+              "token_id": 2308,
+              "logit": 10.2109375,
+              "probability": 1.2625417408046978e-14,
+              "rank": 19
+            },
+            " Unknown": {
+              "token_id": 21693,
+              "logit": 10.734375,
+              "probability": 7.227692836592192e-14,
+              "rank": 14
+            }
+          },
+          "top3": [
+            {
+              "token_id": 9454,
+              "logit": 19.765625,
+              "probability": 0.8571799993515015,
+              "rank": 1,
+              "text": "Yes"
+            },
+            {
+              "token_id": 2753,
+              "logit": 19.203125,
+              "probability": 0.13145281374454498,
+              "rank": 2,
+              "text": "No"
+            },
+            {
+              "token_id": 13790,
+              "logit": 18.46875,
+              "probability": 0.011367176659405231,
+              "rank": 3,
+              "text": "Unknown"
+            }
+          ],
+          "yes_minus_no_logit": 0.5625,
+          "first_generated_token": {
+            "token_id": 9454,
+            "logit": 19.765625,
+            "probability": 0.8571799993515015,
+            "rank": 1
+          }
+        }
+      }
+    ],
+    "on": [
+      {
+        "call_id": "f7de9d78fdccf55a6052f06f4a9c79bca4c238610eee86624ef3e44479bc3bc8",
+        "stage": "step",
+        "agent_id": 0,
+        "role": "boundary",
+        "seed": 592093970331763709,
+        "request_sha256": "8215ccc23389623f0a7ca1dbcdf7fb0b6e48c1f85dc6a32aa63d84b7bf1d1cd6",
+        "prompt_tokens": 576,
+        "prompt_tokens_sha256": "e55df214edd3142bce0447a60249510bab5a09324138c935a94712d693e60056",
+        "anchor_token_id": 198,
+        "text": "```json\n[\n  [1, 6, false],\n  [1, 1, false],\n  [1, 1, false],\n  [4, 1, true],\n  [6, 4, false",
+        "parsed": null,
+        "generated_token_ids": [
+          73594,
+          2236,
+          198,
+          9640,
+          220,
+          508,
+          16,
+          11,
+          220,
+          21,
+          11,
+          895,
+          1259,
+          220,
+          508,
+          16,
+          11,
+          220,
+          16,
+          11,
+          895,
+          1259,
+          220,
+          508,
+          16,
+          11,
+          220,
+          16,
+          11,
+          895,
+          1259,
+          220,
+          508,
+          19,
+          11,
+          220,
+          16,
+          11,
+          830,
+          1259,
+          220,
+          508,
+          21,
+          11,
+          220,
+          19,
+          11,
+          895
+        ],
+        "stop_reason": "length",
+        "sampled_token_logprobs": [
+          -0.01800575235745971,
+          0.0,
+          0.0,
+          -0.025361922507751846,
+          -0.09630789286392966,
+          -0.0020704230210173715,
+          -0.14713412767289907,
+          0.0,
+          0.0,
+          -0.023051647600707822,
+          0.0,
+          -0.4662645954381306,
+          -4.768372718899988e-07,
+          0.0,
+          0.0,
+          -0.0015975473913026374,
+          0.0,
+          0.0,
+          -0.6753660425359818,
+          0.0,
+          -0.05009170933073417,
+          -5.364432418327013e-06,
+          0.0,
+          0.0,
+          -0.0036388002541219537,
+          0.0,
+          0.0,
+          -0.14981530000809568,
+          0.0,
+          -0.0016497862050815042,
+          -0.00826438470487948,
+          0.0,
+          0.0,
+          -0.23110734956829337,
+          0.0,
+          0.0,
+          -0.0031866487048391795,
+          0.0,
+          -0.2760855006915917,
+          -0.10120415168693093,
+          0.0,
+          0.0,
+          -0.0007909086941412658,
+          0.0,
+          0.0,
+          -0.07142494576166049,
+          0.0,
+          -0.19029916481164738
+        ],
+        "logits_sha256": "ee099739cb07c459d71c538300761b2a72da1cfe74b211534d66ec2a6b4c08b2",
+        "layer_vector_sha256": "ebcaa3779905b0eae4993c661d493c2b2ba98d0739ef8dcd23e2c183b0b817db",
+        "token_scores": null
+      },
+      {
+        "call_id": "c341d648682fb0728e34dcb78cfe546087611635a243685ecb0bbf46afcfa43f",
+        "stage": "step",
+        "agent_id": 1,
+        "role": "invariant",
+        "seed": 1043261338822295663,
+        "request_sha256": "780808876af8732064e56827a5b83e26b4ba318f4e6a68e45b1246511e82ce87",
+        "prompt_tokens": 575,
+        "prompt_tokens_sha256": "fec15206ba6d85a516b0d64e761a3e7bd04abd6c2cd7575124a9f62497c58baf",
+        "anchor_token_id": 198,
+        "text": "[2, 2]",
+        "parsed": [
+          2,
+          2
+        ],
+        "generated_token_ids": [
+          58,
+          17,
+          11,
+          220,
+          17,
+          60,
+          151645
+        ],
+        "stop_reason": "eos",
+        "sampled_token_logprobs": [
+          -0.043051976680821905,
+          -0.26205032244423315,
+          0.0,
+          -1.1920929665620916e-07,
+          -1.1236163870143163,
+          0.0,
+          0.0
+        ],
+        "logits_sha256": "e42b6c034503ed7848787bb77d0005fb7f85b1a4a43a2c605c79b4828cf35495",
+        "layer_vector_sha256": "a09bcbe65d7172204fd128f5871a2d012c5a83c75e93a3e16f4494db3f3e5c7e",
+        "token_scores": null
+      },
+      {
+        "call_id": "f22f5329cbf3f3152def78b713b96f7267e02d76a3cb6a0f034ef07a4e1e0d3b",
+        "stage": "step",
+        "agent_id": 2,
+        "role": "simulation",
+        "seed": 426764701601390746,
+        "request_sha256": "ca47f3c237b3d8fe7d0e4d515e7ae0f7c0c62b58386a43d25a2b1e6e608eaea5",
+        "prompt_tokens": 575,
+        "prompt_tokens_sha256": "f84587e94168192bc2e77286be167ef87ec22409ecdb4df661f1c44c4c4af68d",
+        "anchor_token_id": 198,
+        "text": "```json\n[1, 0]\n```",
+        "parsed": [
+          1,
+          0
+        ],
+        "generated_token_ids": [
+          73594,
+          2236,
+          198,
+          58,
+          16,
+          11,
+          220,
+          15,
+          921,
+          73594,
+          151645
+        ],
+        "stop_reason": "eos",
+        "sampled_token_logprobs": [
+          -0.0041394556432337,
+          0.0,
+          0.0,
+          -0.07885999686618962,
+          -0.08950687262746337,
+          0.0,
+          0.0,
+          -0.6183080671590989,
+          -2.3841886331910857e-06,
+          0.0,
+          0.0
+        ],
+        "logits_sha256": "c4578fdcba51d8c4651725a61d47293d31963e07166351db96f6b6bdb0ca6651",
+        "layer_vector_sha256": "b5f37afcce36fbb384d492a268c7f4c7772f578c7352c8949de5a43fa1064131",
+        "token_scores": null
+      },
+      {
+        "call_id": "95ccedea4bc6c7bf362b0fffa786897b95c51fb9b7927980f624dda6663dceb9",
+        "stage": "step",
+        "agent_id": 3,
+        "role": "trace",
+        "seed": 776498382668742209,
+        "request_sha256": "f71bf529e4d065be7d2b4917a478f28542be2e7bd2a83adda740cbacbe655086",
+        "prompt_tokens": 574,
+        "prompt_tokens_sha256": "571b8e12682c2b1bb60914f9bbacdf55473be2ed6136a034fde3a9fff436fc9f",
+        "anchor_token_id": 198,
+        "text": "```json\n[[1, 0], [1, 1]]\n```",
+        "parsed": [
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "generated_token_ids": [
+          73594,
+          2236,
+          198,
+          15505,
+          16,
+          11,
+          220,
+          15,
+          1125,
+          508,
+          16,
+          11,
+          220,
+          16,
+          14288,
+          73594,
+          151645
+        ],
+        "stop_reason": "eos",
+        "sampled_token_logprobs": [
+          -0.0013692808674176965,
+          0.0,
+          0.0,
+          -0.6717783138710487,
+          -0.7869422202500721,
+          -3.576279326012052e-07,
+          -0.00015593790841610634,
+          -0.009146670663028702,
+          -0.0018310611271478406,
+          0.0,
+          -0.00010812867131664133,
+          0.0,
+          0.0,
+          -0.021252523751576442,
+          -1.1920929665620916e-07,
+          0.0,
+          0.0
+        ],
+        "logits_sha256": "563b89ebdb41a5971130d62bbbfb969d3963fd9c4a0b9beaa555299a76b9edd1",
+        "layer_vector_sha256": "4552e699e660ac22fb84cbc2d94d3090c0cd4091126d848b7e319d875616d919",
+        "token_scores": null
+      },
+      {
+        "call_id": "4e7c783a0fde83aa05957519dc4a893af2ecccad2ae7086d435f223526ee07a2",
+        "stage": "initial",
+        "agent_id": 0,
+        "role": "boundary",
+        "seed": 924793350851983637,
+        "request_sha256": "4941dd3521dcde1ef88440b591d51c54b85a7a5a33cca501bdc93251854557b9",
+        "prompt_tokens": 706,
+        "prompt_tokens_sha256": "1cb1f965d67b252dc0ad9fed83446271b55f5f8792cc49e53a88f97a49f29a7d",
+        "anchor_token_id": 198,
+        "text": "Yes",
+        "parsed": "yes",
+        "generated_token_ids": [
+          9454,
+          151645
+        ],
+        "stop_reason": "eos",
+        "sampled_token_logprobs": [
+          -0.6506293896081558,
+          -6.3181123054209235e-06
+        ],
+        "logits_sha256": "9a2ae32e8a11ac06c61f7de0e588bbecd313ff665c5f897d575c7a4bd22caf56",
+        "layer_vector_sha256": "5907f5e6bd4d0d41d0e58ed6d43635ea5b6af548daa914962b5dd4ba508dbb6d",
+        "token_scores": {
+          "labels": {
+            "Yes": {
+              "token_id": 9454,
+              "logit": 19.296875,
+              "probability": 0.5217182636260986,
+              "rank": 1
+            },
+            "No": {
+              "token_id": 2753,
+              "logit": 19.125,
+              "probability": 0.2941852807998657,
+              "rank": 2
+            },
+            "Unknown": {
+              "token_id": 13790,
+              "logit": 18.984375,
+              "probability": 0.18409644067287445,
+              "rank": 3
+            },
+            " Yes": {
+              "token_id": 7414,
+              "logit": 11.2578125,
+              "probability": 1.2014371702367965e-12,
+              "rank": 9
+            },
+            " No": {
+              "token_id": 2308,
+              "logit": 10.1640625,
+              "probability": 3.1357132602299886e-14,
+              "rank": 22
+            },
+            " Unknown": {
+              "token_id": 21693,
+              "logit": 11.265625,
+              "probability": 1.2331372901963622e-12,
+              "rank": 8
+            }
+          },
+          "top3": [
+            {
+              "token_id": 9454,
+              "logit": 19.296875,
+              "probability": 0.5217182636260986,
+              "rank": 1,
+              "text": "Yes"
+            },
+            {
+              "token_id": 2753,
+              "logit": 19.125,
+              "probability": 0.2941852807998657,
+              "rank": 2,
+              "text": "No"
+            },
+            {
+              "token_id": 13790,
+              "logit": 18.984375,
+              "probability": 0.18409644067287445,
+              "rank": 3,
+              "text": "Unknown"
+            }
+          ],
+          "yes_minus_no_logit": 0.171875,
+          "first_generated_token": {
+            "token_id": 9454,
+            "logit": 19.296875,
+            "probability": 0.5217182636260986,
+            "rank": 1
+          }
+        }
+      },
+      {
+        "call_id": "cc98f966a2c396dea1d9ac947e6f50574e8c4002ac30e4cad9f21195e665885e",
+        "stage": "initial",
+        "agent_id": 1,
+        "role": "invariant",
+        "seed": 71137088538748202,
+        "request_sha256": "f4e57aaa67e1bcec4de267d5d24fa54de2f7b05ba04a100533128920589967eb",
+        "prompt_tokens": 663,
+        "prompt_tokens_sha256": "da1332285810b7d6368f963a68abf352ac6dd39851c00b36d9f9808daf794b45",
+        "anchor_token_id": 198,
+        "text": "Yes",
+        "parsed": "yes",
+        "generated_token_ids": [
+          9454,
+          151645
+        ],
+        "stop_reason": "eos",
+        "sampled_token_logprobs": [
+          -0.7145949205165237,
+          -8.583105682402442e-06
+        ],
+        "logits_sha256": "2a34026f8954d95b2c3f819cba629b9fac3c1a63a6af6fbbb4b9fad391abecc4",
+        "layer_vector_sha256": "ac2568a96d7153f6fe7df9d1424a26987a7372462707aad92783e7ad2feb9959",
+        "token_scores": {
+          "labels": {
+            "Yes": {
+              "token_id": 9454,
+              "logit": 19.109375,
+              "probability": 0.4893903136253357,
+              "rank": 1
+            },
+            "No": {
+              "token_id": 2753,
+              "logit": 18.921875,
+              "probability": 0.2619517743587494,
+              "rank": 2
+            },
+            "Unknown": {
+              "token_id": 13790,
+              "logit": 18.90625,
+              "probability": 0.2486579567193985,
+              "rank": 3
+            },
+            " Yes": {
+              "token_id": 7414,
+              "logit": 10.9765625,
+              "probability": 8.245242054220892e-13,
+              "rank": 13
+            },
+            " No": {
+              "token_id": 2308,
+              "logit": 9.8984375,
+              "probability": 2.2670316755031734e-14,
+              "rank": 24
+            },
+            " Unknown": {
+              "token_id": 21693,
+              "logit": 11.078125,
+              "probability": 1.1567266242074048e-12,
+              "rank": 8
+            }
+          },
+          "top3": [
+            {
+              "token_id": 9454,
+              "logit": 19.109375,
+              "probability": 0.4893903136253357,
+              "rank": 1,
+              "text": "Yes"
+            },
+            {
+              "token_id": 2753,
+              "logit": 18.921875,
+              "probability": 0.2619517743587494,
+              "rank": 2,
+              "text": "No"
+            },
+            {
+              "token_id": 13790,
+              "logit": 18.90625,
+              "probability": 0.2486579567193985,
+              "rank": 3,
+              "text": "Unknown"
+            }
+          ],
+          "yes_minus_no_logit": 0.1875,
+          "first_generated_token": {
+            "token_id": 9454,
+            "logit": 19.109375,
+            "probability": 0.4893903136253357,
+            "rank": 1
+          }
+        }
+      },
+      {
+        "call_id": "4dc87a72fc0c3997cee65a090016912f0a75a7b14f0a15ecf21d39e899780b02",
+        "stage": "initial",
+        "agent_id": 2,
+        "role": "simulation",
+        "seed": 233128483962487081,
+        "request_sha256": "5f2cbad712d4b8d2a6a9f423b298d83dd3b5a7a7ad0b8f651b0d44916a7ca79b",
+        "prompt_tokens": 667,
+        "prompt_tokens_sha256": "4b107c54f94e41f34b6ed5e5abb03af3cf80cdaf9468a42440ce77e4fbf7807c",
+        "anchor_token_id": 198,
+        "text": "Unknown",
+        "parsed": "unknown",
+        "generated_token_ids": [
+          13790,
+          151645
+        ],
+        "stop_reason": "eos",
+        "sampled_token_logprobs": [
+          -1.3987824759461427,
+          -8.046950803079586e-05
+        ],
+        "logits_sha256": "7e4913e01ce066e82149976b90d27d98deb1180d172c0474879f2a7dfae9451b",
+        "layer_vector_sha256": "a59f522a9a25d54fbf2e1278d8259961994da56782f8e5785a7053d44b16b4f9",
+        "token_scores": {
+          "labels": {
+            "Yes": {
+              "token_id": 9454,
+              "logit": 19.109375,
+              "probability": 0.4156339168548584,
+              "rank": 1
+            },
+            "No": {
+              "token_id": 2753,
+              "logit": 19.046875,
+              "probability": 0.3374687135219574,
+              "rank": 2
+            },
+            "Unknown": {
+              "token_id": 13790,
+              "logit": 18.953125,
+              "probability": 0.2468973845243454,
+              "rank": 3
+            },
+            " Yes": {
+              "token_id": 7414,
+              "logit": 11.015625,
+              "probability": 7.976436351697647e-13,
+              "rank": 9
+            },
+            " No": {
+              "token_id": 2308,
+              "logit": 10.0390625,
+              "probability": 3.07672554697002e-14,
+              "rank": 21
+            },
+            " Unknown": {
+              "token_id": 21693,
+              "logit": 11.171875,
+              "probability": 1.3427752833250484e-12,
+              "rank": 7
+            }
+          },
+          "top3": [
+            {
+              "token_id": 9454,
+              "logit": 19.109375,
+              "probability": 0.4156339168548584,
+              "rank": 1,
+              "text": "Yes"
+            },
+            {
+              "token_id": 2753,
+              "logit": 19.046875,
+              "probability": 0.3374687135219574,
+              "rank": 2,
+              "text": "No"
+            },
+            {
+              "token_id": 13790,
+              "logit": 18.953125,
+              "probability": 0.2468973845243454,
+              "rank": 3,
+              "text": "Unknown"
+            }
+          ],
+          "yes_minus_no_logit": 0.0625,
+          "first_generated_token": {
+            "token_id": 13790,
+            "logit": 18.953125,
+            "probability": 0.2468973845243454,
+            "rank": 3
+          }
+        }
+      },
+      {
+        "call_id": "9da01b0d6f429b773d3ca4c91d10645230f41eb371f2e6ae8305827b416f3c73",
+        "stage": "initial",
+        "agent_id": 3,
+        "role": "trace",
+        "seed": 839793943881852345,
+        "request_sha256": "02c620a7cb3599f7dfb31f9c34952a39fdb0360ce18fcc95fcd2fedf4e9448b4",
+        "prompt_tokens": 672,
+        "prompt_tokens_sha256": "f3912df7a8f1e0a493f2ddef86b0dc0838b01b2346581e4f6bcc3dbbf06f39ec",
+        "anchor_token_id": 198,
+        "text": "No",
+        "parsed": "no",
+        "generated_token_ids": [
+          2753,
+          151645
+        ],
+        "stop_reason": "eos",
+        "sampled_token_logprobs": [
+          -1.0338726816781816,
+          -1.0013630458495755e-05
+        ],
+        "logits_sha256": "5e616b80169d7a8e08a265eace1e51b7fd729db92cef7bf9f908f5da7bde815f",
+        "layer_vector_sha256": "7b09491e90e072810f7e1f0e53befd31d89825ceacc0a8ce6131da78abcbda2c",
+        "token_scores": {
+          "labels": {
+            "Yes": {
+              "token_id": 9454,
+              "logit": 19.125,
+              "probability": 0.3556267023086548,
+              "rank": 1
+            },
+            "No": {
+              "token_id": 2753,
+              "logit": 19.125,
+              "probability": 0.3556267023086548,
+              "rank": 1
+            },
+            "Unknown": {
+              "token_id": 13790,
+              "logit": 19.0625,
+              "probability": 0.2887466251850128,
+              "rank": 3
+            },
+            " Yes": {
+              "token_id": 7414,
+              "logit": 10.9921875,
+              "probability": 5.991617250088177e-13,
+              "rank": 11
+            },
+            " No": {
+              "token_id": 2308,
+              "logit": 10.078125,
+              "probability": 2.8464467653581405e-14,
+              "rank": 22
+            },
+            " Unknown": {
+              "token_id": 21693,
+              "logit": 11.2265625,
+              "probability": 1.3086893764849283e-12,
+              "rank": 7
+            }
+          },
+          "top3": [
+            {
+              "token_id": 2753,
+              "logit": 19.125,
+              "probability": 0.3556267023086548,
+              "rank": 1,
+              "text": "No"
+            },
+            {
+              "token_id": 9454,
+              "logit": 19.125,
+              "probability": 0.3556267023086548,
+              "rank": 1,
+              "text": "Yes"
+            },
+            {
+              "token_id": 13790,
+              "logit": 19.0625,
+              "probability": 0.2887466251850128,
+              "rank": 3,
+              "text": "Unknown"
+            }
+          ],
+          "yes_minus_no_logit": 0.0,
+          "first_generated_token": {
+            "token_id": 2753,
+            "logit": 19.125,
+            "probability": 0.3556267023086548,
+            "rank": 1
+          }
+        }
+      },
+      {
+        "call_id": "5ee4f7fbf9af3678d05e6d767b66cbf431261cfba4fe87d2ed74ec5fc81cd138",
+        "stage": "private",
+        "agent_id": 0,
+        "role": "boundary",
+        "seed": 796935447154623670,
+        "request_sha256": "60bd679ff0a51dd338b84835d291018a43739ecc4794581015317fff1ba30e9c",
+        "prompt_tokens": 748,
+        "prompt_tokens_sha256": "ad3a7318598c5e4d9a4ef4a8fe3bbd6838eca4987a15bd297e8c610024f256e0",
+        "anchor_token_id": 198,
+        "text": "Yes",
+        "parsed": "yes",
+        "generated_token_ids": [
+          9454,
+          151645
+        ],
+        "stop_reason": "eos",
+        "sampled_token_logprobs": [
+          -0.04210023551738776,
+          0.0
+        ],
+        "logits_sha256": "ed41e8a643a24f2c07ec19ecd2d3b76ee8a0c5eadc309467f2437aaf12677860",
+        "layer_vector_sha256": "aff1a6c2adfc2cc70cd32ab9e7c24a60bb90f686726bd811a5f73bfef38b433f",
+        "token_scores": {
+          "labels": {
+            "Yes": {
+              "token_id": 9454,
+              "logit": 19.65625,
+              "probability": 0.958773672580719,
+              "rank": 1
+            },
+            "No": {
+              "token_id": 2753,
+              "logit": 18.578125,
+              "probability": 0.026361610740423203,
+              "rank": 2
+            },
+            "Unknown": {
+              "token_id": 13790,
+              "logit": 18.40625,
+              "probability": 0.0148647241294384,
+              "rank": 3
+            },
+            " Yes": {
+              "token_id": 7414,
+              "logit": 11.484375,
+              "probability": 1.4181349237279983e-12,
+              "rank": 7
+            },
+            " No": {
+              "token_id": 2308,
+              "logit": 9.59375,
+              "probability": 2.59870195261564e-15,
+              "rank": 27
+            },
+            " Unknown": {
+              "token_id": 21693,
+              "logit": 10.609375,
+              "probability": 7.674052772367254e-14,
+              "rank": 15
+            }
+          },
+          "top3": [
+            {
+              "token_id": 9454,
+              "logit": 19.65625,
+              "probability": 0.958773672580719,
+              "rank": 1,
+              "text": "Yes"
+            },
+            {
+              "token_id": 2753,
+              "logit": 18.578125,
+              "probability": 0.026361610740423203,
+              "rank": 2,
+              "text": "No"
+            },
+            {
+              "token_id": 13790,
+              "logit": 18.40625,
+              "probability": 0.0148647241294384,
+              "rank": 3,
+              "text": "Unknown"
+            }
+          ],
+          "yes_minus_no_logit": 1.078125,
+          "first_generated_token": {
+            "token_id": 9454,
+            "logit": 19.65625,
+            "probability": 0.958773672580719,
+            "rank": 1
+          }
+        }
+      },
+      {
+        "call_id": "f6c0d6e44e2535f74b046bca7230c8b8dc8aa12b36a7bba05459793d8c8ede00",
+        "stage": "private",
+        "agent_id": 1,
+        "role": "invariant",
+        "seed": 725658350378146381,
+        "request_sha256": "3ae4d0a9af129b273fb093fedb75e0f0b4d803572c3fd4b6edfeb8635d05fbef",
+        "prompt_tokens": 705,
+        "prompt_tokens_sha256": "b4625ae59112d558a3260254c5d1ccdb63cdadde9270100ba07e9dc189913488",
+        "anchor_token_id": 198,
+        "text": "Yes",
+        "parsed": "yes",
+        "generated_token_ids": [
+          9454,
+          151645
+        ],
+        "stop_reason": "eos",
+        "sampled_token_logprobs": [
+          -0.055795357544671124,
+          0.0
+        ],
+        "logits_sha256": "914f9ed6dad85c73f1ece94d00192a53ae8c3b03389357d32cb40eaecf6c4018",
+        "layer_vector_sha256": "75133be75ce0187cb7159f5d9db9978be39515d22baab1241bfddcfc27154e9d",
+        "token_scores": {
+          "labels": {
+            "Yes": {
+              "token_id": 9454,
+              "logit": 19.640625,
+              "probability": 0.9457327723503113,
+              "rank": 1
+            },
+            "No": {
+              "token_id": 2753,
+              "logit": 18.625,
+              "probability": 0.03202580660581589,
+              "rank": 2
+            },
+            "Unknown": {
+              "token_id": 13790,
+              "logit": 18.515625,
+              "probability": 0.022241419181227684,
+              "rank": 3
+            },
+            " Yes": {
+              "token_id": 7414,
+              "logit": 11.4140625,
+              "probability": 1.1657339590159799e-12,
+              "rank": 7
+            },
+            " No": {
+              "token_id": 2308,
+              "logit": 9.6015625,
+              "probability": 2.7716372813247616e-15,
+              "rank": 29
+            },
+            " Unknown": {
+              "token_id": 21693,
+              "logit": 10.6484375,
+              "probability": 9.083278427373179e-14,
+              "rank": 16
+            }
+          },
+          "top3": [
+            {
+              "token_id": 9454,
+              "logit": 19.640625,
+              "probability": 0.9457327723503113,
+              "rank": 1,
+              "text": "Yes"
+            },
+            {
+              "token_id": 2753,
+              "logit": 18.625,
+              "probability": 0.03202580660581589,
+              "rank": 2,
+              "text": "No"
+            },
+            {
+              "token_id": 13790,
+              "logit": 18.515625,
+              "probability": 0.022241419181227684,
+              "rank": 3,
+              "text": "Unknown"
+            }
+          ],
+          "yes_minus_no_logit": 1.015625,
+          "first_generated_token": {
+            "token_id": 9454,
+            "logit": 19.640625,
+            "probability": 0.9457327723503113,
+            "rank": 1
+          }
+        }
+      },
+      {
+        "call_id": "22fa709688ec1937c892bf637db804801fe45dc8cde4b743f547dec6d86f2eb1",
+        "stage": "private",
+        "agent_id": 2,
+        "role": "simulation",
+        "seed": 182211423270019531,
+        "request_sha256": "d1efa89d0dd1431b46901bcb93be02d7a7ea36b9a9f736284be2798ce02f4955",
+        "prompt_tokens": 709,
+        "prompt_tokens_sha256": "0109044ecf9041c9d09b038be330ac85a3a31e4ec2a65a8b59792828b6c14273",
+        "anchor_token_id": 198,
+        "text": "No",
+        "parsed": "no",
+        "generated_token_ids": [
+          2753,
+          151645
+        ],
+        "stop_reason": "eos",
+        "sampled_token_logprobs": [
+          -2.175081210631422,
+          -3.576279326012052e-07
+        ],
+        "logits_sha256": "35ae40cbb34a8786b11c0db37a83f309ee27816dc2ad4594a85a2bea75811f4d",
+        "layer_vector_sha256": "0d7e2ac8ea0e9f8541b21177cf5752dca4a2c00156a5bcca97f56a8bfda4d7ab",
+        "token_scores": {
+          "labels": {
+            "Yes": {
+              "token_id": 9454,
+              "logit": 19.5,
+              "probability": 0.8660343885421753,
+              "rank": 1
+            },
+            "No": {
+              "token_id": 2753,
+              "logit": 18.890625,
+              "probability": 0.11359856277704239,
+              "rank": 2
+            },
+            "Unknown": {
+              "token_id": 13790,
+              "logit": 18.375,
+              "probability": 0.020367098972201347,
+              "rank": 3
+            },
+            " Yes": {
+              "token_id": 7414,
+              "logit": 11.4765625,
+              "probability": 2.100966753001976e-12,
+              "rank": 6
+            },
+            " No": {
+              "token_id": 2308,
+              "logit": 10.0234375,
+              "probability": 1.655027670628955e-14,
+              "rank": 19
+            },
+            " Unknown": {
+              "token_id": 21693,
+              "logit": 10.71875,
+              "probability": 1.6802450273148417e-13,
+              "rank": 13
+            }
+          },
+          "top3": [
+            {
+              "token_id": 9454,
+              "logit": 19.5,
+              "probability": 0.8660343885421753,
+              "rank": 1,
+              "text": "Yes"
+            },
+            {
+              "token_id": 2753,
+              "logit": 18.890625,
+              "probability": 0.11359856277704239,
+              "rank": 2,
+              "text": "No"
+            },
+            {
+              "token_id": 13790,
+              "logit": 18.375,
+              "probability": 0.020367098972201347,
+              "rank": 3,
+              "text": "Unknown"
+            }
+          ],
+          "yes_minus_no_logit": 0.609375,
+          "first_generated_token": {
+            "token_id": 2753,
+            "logit": 18.890625,
+            "probability": 0.11359856277704239,
+            "rank": 2
+          }
+        }
+      },
+      {
+        "call_id": "d910b5cf50afc6730a3e7d43f985f3947190bf8e1c0119781e624aa14b0a3b40",
+        "stage": "private",
+        "agent_id": 3,
+        "role": "trace",
+        "seed": 429618993130734582,
+        "request_sha256": "01ccc75259c0159c6616fbb79130e27b4133d027efcc744ce0a14dbeb90794b8",
+        "prompt_tokens": 714,
+        "prompt_tokens_sha256": "65e641aed309b4cbab451d7c49a27ebed06bd2735cfccc924bf2933facfc0a8c",
+        "anchor_token_id": 198,
+        "text": "Yes",
+        "parsed": "yes",
+        "generated_token_ids": [
+          9454,
+          151645
+        ],
+        "stop_reason": "eos",
+        "sampled_token_logprobs": [
+          -0.11362954805128406,
+          0.0
+        ],
+        "logits_sha256": "3aa3d6cd9de34d3ae60d9bd8a0a5f280412e9f87d8ab9ab749d4ff4413fb5613",
+        "layer_vector_sha256": "920f8a832a811154a41c1b309b09e1fee9d04dc3ba6c089e6ca7dd8ef39da7d7",
+        "token_scores": {
+          "labels": {
+            "Yes": {
+              "token_id": 9454,
+              "logit": 19.5,
+              "probability": 0.8925885558128357,
+              "rank": 1
+            },
+            "No": {
+              "token_id": 2753,
+              "logit": 18.765625,
+              "probability": 0.07718520611524582,
+              "rank": 2
+            },
+            "Unknown": {
+              "token_id": 13790,
+              "logit": 18.484375,
+              "probability": 0.03022615984082222,
+              "rank": 3
+            },
+            " Yes": {
+              "token_id": 7414,
+              "logit": 11.359375,
+              "probability": 1.465173468662151e-12,
+              "rank": 7
+            },
+            " No": {
+              "token_id": 2308,
+              "logit": 9.765625,
+              "probability": 7.222700763214254e-15,
+              "rank": 19
+            },
+            " Unknown": {
+              "token_id": 21693,
+              "logit": 10.6640625,
+              "probability": 1.4431838157250715e-13,
+              "rank": 13
+            }
+          },
+          "top3": [
+            {
+              "token_id": 9454,
+              "logit": 19.5,
+              "probability": 0.8925885558128357,
+              "rank": 1,
+              "text": "Yes"
+            },
+            {
+              "token_id": 2753,
+              "logit": 18.765625,
+              "probability": 0.07718520611524582,
+              "rank": 2,
+              "text": "No"
+            },
+            {
+              "token_id": 13790,
+              "logit": 18.484375,
+              "probability": 0.03022615984082222,
+              "rank": 3,
+              "text": "Unknown"
+            }
+          ],
+          "yes_minus_no_logit": 0.734375,
+          "first_generated_token": {
+            "token_id": 9454,
+            "logit": 19.5,
+            "probability": 0.8925885558128357,
+            "rank": 1
+          }
+        }
+      },
+      {
+        "call_id": "ce10d6dc01fbe3f0da297dece4484330dcd03d21f9f651d96b53eaeb6c995dc4",
+        "stage": "peer",
+        "agent_id": 0,
+        "role": "boundary",
+        "seed": 796935447154623670,
+        "request_sha256": "1873a3dca0b1a09d1b94983f6508ea2c8d210d3b16346c094d57085668d9f943",
+        "prompt_tokens": 775,
+        "prompt_tokens_sha256": "4244c5c6d5bad8fc78813eff3a6c6992f3965bc8471d3daa99e345fe250845a3",
+        "anchor_token_id": 198,
+        "text": "Yes",
+        "parsed": "yes",
+        "generated_token_ids": [
+          9454,
+          151645
+        ],
+        "stop_reason": "eos",
+        "sampled_token_logprobs": [
+          -0.035313542101587776,
+          0.0
+        ],
+        "logits_sha256": "87fde95145de2ed211cbe9fc5d451e3cd803cca56d6e15e75fc4bf501d2bb9ad",
+        "layer_vector_sha256": "2e38badd2c9bc23bac3114196da46612dba7da38413d76672be70966bc3ff2e2",
+        "token_scores": {
+          "labels": {
+            "Yes": {
+              "token_id": 9454,
+              "logit": 20.078125,
+              "probability": 0.9653027057647705,
+              "rank": 1
+            },
+            "No": {
+              "token_id": 2753,
+              "logit": 19.046875,
+              "probability": 0.031029725447297096,
+              "rank": 2
+            },
+            "Unknown": {
+              "token_id": 13790,
+              "logit": 18.40625,
+              "probability": 0.0036675636656582355,
+              "rank": 3
+            },
+            " Yes": {
+              "token_id": 7414,
+              "logit": 11.9375,
+              "probability": 1.584538923682377e-12,
+              "rank": 4
+            },
+            " No": {
+              "token_id": 2308,
+              "logit": 10.078125,
+              "probability": 3.222426310029369e-15,
+              "rank": 19
+            },
+            " Unknown": {
+              "token_id": 21693,
+              "logit": 10.6796875,
+              "probability": 2.3934996237588713e-14,
+              "rank": 16
+            }
+          },
+          "top3": [
+            {
+              "token_id": 9454,
+              "logit": 20.078125,
+              "probability": 0.9653027057647705,
+              "rank": 1,
+              "text": "Yes"
+            },
+            {
+              "token_id": 2753,
+              "logit": 19.046875,
+              "probability": 0.031029725447297096,
+              "rank": 2,
+              "text": "No"
+            },
+            {
+              "token_id": 13790,
+              "logit": 18.40625,
+              "probability": 0.0036675636656582355,
+              "rank": 3,
+              "text": "Unknown"
+            }
+          ],
+          "yes_minus_no_logit": 1.03125,
+          "first_generated_token": {
+            "token_id": 9454,
+            "logit": 20.078125,
+            "probability": 0.9653027057647705,
+            "rank": 1
+          }
+        }
+      },
+      {
+        "call_id": "f3571700042997f48d34175322a7de15bed21d84ff974d2ce93cef1db5e170a4",
+        "stage": "peer",
+        "agent_id": 1,
+        "role": "invariant",
+        "seed": 725658350378146381,
+        "request_sha256": "361a83f8d297ab641586435722c2ce0e29b14065d1af55d40f59f0d72b5fa0de",
+        "prompt_tokens": 732,
+        "prompt_tokens_sha256": "ecc3e57d5360614360419d4a19d9758241289f3d3b17f4a1bc459aa30f74f5aa",
+        "anchor_token_id": 198,
+        "text": "Yes",
+        "parsed": "yes",
+        "generated_token_ids": [
+          9454,
+          151645
+        ],
+        "stop_reason": "eos",
+        "sampled_token_logprobs": [
+          -0.04331809380516843,
+          0.0
+        ],
+        "logits_sha256": "d1a4099b409f002bf798f2fe25d10a1143a62fcc34ab4578b00b7e3cd0ede77a",
+        "layer_vector_sha256": "66bf526e24cec2fee798d0d1cb6234952cf923c0088903c6cbb27b33acfb7b48",
+        "token_scores": {
+          "labels": {
+            "Yes": {
+              "token_id": 9454,
+              "logit": 20.078125,
+              "probability": 0.9576067328453064,
+              "rank": 1
+            },
+            "No": {
+              "token_id": 2753,
+              "logit": 19.109375,
+              "probability": 0.03791220486164093,
+              "rank": 2
+            },
+            "Unknown": {
+              "token_id": 13790,
+              "logit": 18.46875,
+              "probability": 0.004481039475649595,
+              "rank": 3
+            },
+            " Yes": {
+              "token_id": 7414,
+              "logit": 11.859375,
+              "probability": 1.2115187325578702e-12,
+              "rank": 4
+            },
+            " No": {
+              "token_id": 2308,
+              "logit": 10.046875,
+              "probability": 2.880494991090569e-15,
+              "rank": 20
+            },
+            " Unknown": {
+              "token_id": 21693,
+              "logit": 10.65625,
+              "probability": 2.195976961470031e-14,
+              "rank": 16
+            }
+          },
+          "top3": [
+            {
+              "token_id": 9454,
+              "logit": 20.078125,
+              "probability": 0.9576067328453064,
+              "rank": 1,
+              "text": "Yes"
+            },
+            {
+              "token_id": 2753,
+              "logit": 19.109375,
+              "probability": 0.03791220486164093,
+              "rank": 2,
+              "text": "No"
+            },
+            {
+              "token_id": 13790,
+              "logit": 18.46875,
+              "probability": 0.004481039475649595,
+              "rank": 3,
+              "text": "Unknown"
+            }
+          ],
+          "yes_minus_no_logit": 0.96875,
+          "first_generated_token": {
+            "token_id": 9454,
+            "logit": 20.078125,
+            "probability": 0.9576067328453064,
+            "rank": 1
+          }
+        }
+      },
+      {
+        "call_id": "a246f008cb2aa93c770c5ca8b7ce1729eee0760b44022a97318213281b268bdf",
+        "stage": "peer",
+        "agent_id": 2,
+        "role": "simulation",
+        "seed": 182211423270019531,
+        "request_sha256": "7dd781a99ef4f233c4a74df6e126391de03517822f975a51aeb90243da73f7e0",
+        "prompt_tokens": 736,
+        "prompt_tokens_sha256": "ad7661d225ad13e62fdf9d499c4b14ecd25ba5778a40609ddbf5dfc76e0c55fb",
+        "anchor_token_id": 198,
+        "text": "No",
+        "parsed": "no",
+        "generated_token_ids": [
+          2753,
+          151645
+        ],
+        "stop_reason": "eos",
+        "sampled_token_logprobs": [
+          -2.0014099165444823,
+          0.0
+        ],
+        "logits_sha256": "44f29b59484e35d34ca87e644fc7054ca00261215cb4e6f915d387001efe8a87",
+        "layer_vector_sha256": "2cd4ee486402d465df79193cc09963e157db88a1d63f11ba6300c668f6c8741f",
+        "token_scores": {
+          "labels": {
+            "Yes": {
+              "token_id": 9454,
+              "logit": 19.375,
+              "probability": 0.8365275859832764,
+              "rank": 1
+            },
+            "No": {
+              "token_id": 2753,
+              "logit": 18.828125,
+              "probability": 0.13514460623264313,
+              "rank": 2
+            },
+            "Unknown": {
+              "token_id": 13790,
+              "logit": 18.359375,
+              "probability": 0.02832784876227379,
+              "rank": 3
+            },
+            " Yes": {
+              "token_id": 7414,
+              "logit": 11.46875,
+              "probability": 2.999246901183583e-12,
+              "rank": 6
+            },
+            " No": {
+              "token_id": 2308,
+              "logit": 10.0234375,
+              "probability": 2.424982483155598e-14,
+              "rank": 18
+            },
+            " Unknown": {
+              "token_id": 21693,
+              "logit": 10.75,
+              "probability": 2.7322195612737576e-13,
+              "rank": 10
+            }
+          },
+          "top3": [
+            {
+              "token_id": 9454,
+              "logit": 19.375,
+              "probability": 0.8365275859832764,
+              "rank": 1,
+              "text": "Yes"
+            },
+            {
+              "token_id": 2753,
+              "logit": 18.828125,
+              "probability": 0.13514460623264313,
+              "rank": 2,
+              "text": "No"
+            },
+            {
+              "token_id": 13790,
+              "logit": 18.359375,
+              "probability": 0.02832784876227379,
+              "rank": 3,
+              "text": "Unknown"
+            }
+          ],
+          "yes_minus_no_logit": 0.546875,
+          "first_generated_token": {
+            "token_id": 2753,
+            "logit": 18.828125,
+            "probability": 0.13514460623264313,
+            "rank": 2
+          }
+        }
+      },
+      {
+        "call_id": "9e438f653ab83af1304fa6fb25f2a941a5d599349547c3a2fe8559ef9660dd31",
+        "stage": "peer",
+        "agent_id": 3,
+        "role": "trace",
+        "seed": 429618993130734582,
+        "request_sha256": "4e4a6dec1158220ef124f8436e56b40ddb68d0e73af76b5b781f86ca339cb402",
+        "prompt_tokens": 741,
+        "prompt_tokens_sha256": "f9228685b86aa377ecc2a96e3fd3c2d561b9ba5e26bac7a4faf3081332bd3a81",
+        "anchor_token_id": 198,
+        "text": "Yes",
+        "parsed": "yes",
+        "generated_token_ids": [
+          9454,
+          151645
+        ],
+        "stop_reason": "eos",
+        "sampled_token_logprobs": [
+          -0.15410741772507708,
+          0.0
+        ],
+        "logits_sha256": "542020058603031c115578a1932229b3f58ce7c3ca62b14ce6a8ae2cfac2d41a",
+        "layer_vector_sha256": "51021b774351e8c4e32c5706c266b785687cace71880918cde51ae8ecb0c8d0f",
+        "token_scores": {
+          "labels": {
+            "Yes": {
+              "token_id": 9454,
+              "logit": 19.765625,
+              "probability": 0.8571799993515015,
+              "rank": 1
+            },
+            "No": {
+              "token_id": 2753,
+              "logit": 19.203125,
+              "probability": 0.13145281374454498,
+              "rank": 2
+            },
+            "Unknown": {
+              "token_id": 13790,
+              "logit": 18.46875,
+              "probability": 0.011367176659405231,
+              "rank": 3
+            },
+            " Yes": {
+              "token_id": 7414,
+              "logit": 11.6640625,
+              "probability": 1.6027271740673421e-12,
+              "rank": 6
+            },
+            " No": {
+              "token_id": 2308,
+              "logit": 10.2109375,
+              "probability": 1.2625417408046978e-14,
+              "rank": 19
+            },
+            " Unknown": {
+              "token_id": 21693,
+              "logit": 10.734375,
+              "probability": 7.227692836592192e-14,
+              "rank": 14
+            }
+          },
+          "top3": [
+            {
+              "token_id": 9454,
+              "logit": 19.765625,
+              "probability": 0.8571799993515015,
+              "rank": 1,
+              "text": "Yes"
+            },
+            {
+              "token_id": 2753,
+              "logit": 19.203125,
+              "probability": 0.13145281374454498,
+              "rank": 2,
+              "text": "No"
+            },
+            {
+              "token_id": 13790,
+              "logit": 18.46875,
+              "probability": 0.011367176659405231,
+              "rank": 3,
+              "text": "Unknown"
+            }
+          ],
+          "yes_minus_no_logit": 0.5625,
+          "first_generated_token": {
+            "token_id": 9454,
+            "logit": 19.765625,
+            "probability": 0.8571799993515015,
+            "rank": 1
+          }
+        }
+      }
+    ]
+  },
+  "historical_prompt_seed_sweeps": {
+    "private": {
+      "historical_call_id": "d910b5cf50afc6730a3e7d43f985f3947190bf8e1c0119781e624aa14b0a3b40",
+      "historical_text": "Yes",
+      "historical_request_sha256": "01ccc75259c0159c6616fbb79130e27b4133d027efcc744ce0a14dbeb90794b8",
+      "seeds": [
+        429618993130734582,
+        11,
+        21,
+        31,
+        41,
+        51,
+        61,
+        71
+      ],
+      "prompt_ids_identical": true,
+      "answer_counts": {
+        "yes": 7,
+        "no": 1
+      },
+      "logits_max_abs_delta": 0.0,
+      "layer_vector_max_abs_delta": 0.0,
+      "calls": [
+        {
+          "call_id": "56c0bf1589ece6e50d513b1993c26c20aef138137d96e900a6722c1385bf11ab",
+          "stage": "private",
+          "agent_id": 3,
+          "role": "trace",
+          "seed": 429618993130734582,
+          "request_sha256": "36e9127fd3a107e094c7795e1dc596fefb78f79e2d53c00624f99ff509fc6d3c",
+          "prompt_tokens": 714,
+          "prompt_tokens_sha256": "65e641aed309b4cbab451d7c49a27ebed06bd2735cfccc924bf2933facfc0a8c",
+          "anchor_token_id": 198,
+          "text": "Yes",
+          "parsed": "yes",
+          "generated_token_ids": [
+            9454,
+            151645
+          ],
+          "stop_reason": "eos",
+          "sampled_token_logprobs": [
+            -0.11362954805128406,
+            0.0
+          ],
+          "logits_sha256": "3aa3d6cd9de34d3ae60d9bd8a0a5f280412e9f87d8ab9ab749d4ff4413fb5613",
+          "layer_vector_sha256": "920f8a832a811154a41c1b309b09e1fee9d04dc3ba6c089e6ca7dd8ef39da7d7",
+          "token_scores": {
+            "labels": {
+              "Yes": {
+                "token_id": 9454,
+                "logit": 19.5,
+                "probability": 0.8925885558128357,
+                "rank": 1
+              },
+              "No": {
+                "token_id": 2753,
+                "logit": 18.765625,
+                "probability": 0.07718520611524582,
+                "rank": 2
+              },
+              "Unknown": {
+                "token_id": 13790,
+                "logit": 18.484375,
+                "probability": 0.03022615984082222,
+                "rank": 3
+              },
+              " Yes": {
+                "token_id": 7414,
+                "logit": 11.359375,
+                "probability": 1.465173468662151e-12,
+                "rank": 7
+              },
+              " No": {
+                "token_id": 2308,
+                "logit": 9.765625,
+                "probability": 7.222700763214254e-15,
+                "rank": 19
+              },
+              " Unknown": {
+                "token_id": 21693,
+                "logit": 10.6640625,
+                "probability": 1.4431838157250715e-13,
+                "rank": 13
+              }
+            },
+            "top3": [
+              {
+                "token_id": 9454,
+                "logit": 19.5,
+                "probability": 0.8925885558128357,
+                "rank": 1,
+                "text": "Yes"
+              },
+              {
+                "token_id": 2753,
+                "logit": 18.765625,
+                "probability": 0.07718520611524582,
+                "rank": 2,
+                "text": "No"
+              },
+              {
+                "token_id": 13790,
+                "logit": 18.484375,
+                "probability": 0.03022615984082222,
+                "rank": 3,
+                "text": "Unknown"
+              }
+            ],
+            "yes_minus_no_logit": 0.734375,
+            "first_generated_token": {
+              "token_id": 9454,
+              "logit": 19.5,
+              "probability": 0.8925885558128357,
+              "rank": 1
+            }
+          }
+        },
+        {
+          "call_id": "47f9e474bfaa71b763b4b7473faffb4c2c1c4becd55e536bb4318d6e57435946",
+          "stage": "private",
+          "agent_id": 3,
+          "role": "trace",
+          "seed": 11,
+          "request_sha256": "e36523b0d420560fcaa72089783ad278925036cb9d6fdb4dbbaf48c16b0a0cfc",
+          "prompt_tokens": 714,
+          "prompt_tokens_sha256": "65e641aed309b4cbab451d7c49a27ebed06bd2735cfccc924bf2933facfc0a8c",
+          "anchor_token_id": 198,
+          "text": "Yes",
+          "parsed": "yes",
+          "generated_token_ids": [
+            9454,
+            151645
+          ],
+          "stop_reason": "eos",
+          "sampled_token_logprobs": [
+            -0.11362954805128406,
+            0.0
+          ],
+          "logits_sha256": "3aa3d6cd9de34d3ae60d9bd8a0a5f280412e9f87d8ab9ab749d4ff4413fb5613",
+          "layer_vector_sha256": "920f8a832a811154a41c1b309b09e1fee9d04dc3ba6c089e6ca7dd8ef39da7d7",
+          "token_scores": {
+            "labels": {
+              "Yes": {
+                "token_id": 9454,
+                "logit": 19.5,
+                "probability": 0.8925885558128357,
+                "rank": 1
+              },
+              "No": {
+                "token_id": 2753,
+                "logit": 18.765625,
+                "probability": 0.07718520611524582,
+                "rank": 2
+              },
+              "Unknown": {
+                "token_id": 13790,
+                "logit": 18.484375,
+                "probability": 0.03022615984082222,
+                "rank": 3
+              },
+              " Yes": {
+                "token_id": 7414,
+                "logit": 11.359375,
+                "probability": 1.465173468662151e-12,
+                "rank": 7
+              },
+              " No": {
+                "token_id": 2308,
+                "logit": 9.765625,
+                "probability": 7.222700763214254e-15,
+                "rank": 19
+              },
+              " Unknown": {
+                "token_id": 21693,
+                "logit": 10.6640625,
+                "probability": 1.4431838157250715e-13,
+                "rank": 13
+              }
+            },
+            "top3": [
+              {
+                "token_id": 9454,
+                "logit": 19.5,
+                "probability": 0.8925885558128357,
+                "rank": 1,
+                "text": "Yes"
+              },
+              {
+                "token_id": 2753,
+                "logit": 18.765625,
+                "probability": 0.07718520611524582,
+                "rank": 2,
+                "text": "No"
+              },
+              {
+                "token_id": 13790,
+                "logit": 18.484375,
+                "probability": 0.03022615984082222,
+                "rank": 3,
+                "text": "Unknown"
+              }
+            ],
+            "yes_minus_no_logit": 0.734375,
+            "first_generated_token": {
+              "token_id": 9454,
+              "logit": 19.5,
+              "probability": 0.8925885558128357,
+              "rank": 1
+            }
+          }
+        },
+        {
+          "call_id": "cd84cf0d7657740b8ff49a4cda4c0478524b9778cf9ae33660fedc6d030f57c7",
+          "stage": "private",
+          "agent_id": 3,
+          "role": "trace",
+          "seed": 21,
+          "request_sha256": "61322e260f878f243b49112a05c699bbc5f570af881075e1f3645a11b8e4f339",
+          "prompt_tokens": 714,
+          "prompt_tokens_sha256": "65e641aed309b4cbab451d7c49a27ebed06bd2735cfccc924bf2933facfc0a8c",
+          "anchor_token_id": 198,
+          "text": "Yes",
+          "parsed": "yes",
+          "generated_token_ids": [
+            9454,
+            151645
+          ],
+          "stop_reason": "eos",
+          "sampled_token_logprobs": [
+            -0.11362954805128406,
+            0.0
+          ],
+          "logits_sha256": "3aa3d6cd9de34d3ae60d9bd8a0a5f280412e9f87d8ab9ab749d4ff4413fb5613",
+          "layer_vector_sha256": "920f8a832a811154a41c1b309b09e1fee9d04dc3ba6c089e6ca7dd8ef39da7d7",
+          "token_scores": {
+            "labels": {
+              "Yes": {
+                "token_id": 9454,
+                "logit": 19.5,
+                "probability": 0.8925885558128357,
+                "rank": 1
+              },
+              "No": {
+                "token_id": 2753,
+                "logit": 18.765625,
+                "probability": 0.07718520611524582,
+                "rank": 2
+              },
+              "Unknown": {
+                "token_id": 13790,
+                "logit": 18.484375,
+                "probability": 0.03022615984082222,
+                "rank": 3
+              },
+              " Yes": {
+                "token_id": 7414,
+                "logit": 11.359375,
+                "probability": 1.465173468662151e-12,
+                "rank": 7
+              },
+              " No": {
+                "token_id": 2308,
+                "logit": 9.765625,
+                "probability": 7.222700763214254e-15,
+                "rank": 19
+              },
+              " Unknown": {
+                "token_id": 21693,
+                "logit": 10.6640625,
+                "probability": 1.4431838157250715e-13,
+                "rank": 13
+              }
+            },
+            "top3": [
+              {
+                "token_id": 9454,
+                "logit": 19.5,
+                "probability": 0.8925885558128357,
+                "rank": 1,
+                "text": "Yes"
+              },
+              {
+                "token_id": 2753,
+                "logit": 18.765625,
+                "probability": 0.07718520611524582,
+                "rank": 2,
+                "text": "No"
+              },
+              {
+                "token_id": 13790,
+                "logit": 18.484375,
+                "probability": 0.03022615984082222,
+                "rank": 3,
+                "text": "Unknown"
+              }
+            ],
+            "yes_minus_no_logit": 0.734375,
+            "first_generated_token": {
+              "token_id": 9454,
+              "logit": 19.5,
+              "probability": 0.8925885558128357,
+              "rank": 1
+            }
+          }
+        },
+        {
+          "call_id": "0a2e624dbc8203413e2666981ac2e3d63ddaa36b40b61f1f1e7366421df7ed79",
+          "stage": "private",
+          "agent_id": 3,
+          "role": "trace",
+          "seed": 31,
+          "request_sha256": "640ddb2afe4e8580d9d8ef01c38f83a27d9b48453a1edc4f2eedef8ac0f48197",
+          "prompt_tokens": 714,
+          "prompt_tokens_sha256": "65e641aed309b4cbab451d7c49a27ebed06bd2735cfccc924bf2933facfc0a8c",
+          "anchor_token_id": 198,
+          "text": "Yes",
+          "parsed": "yes",
+          "generated_token_ids": [
+            9454,
+            151645
+          ],
+          "stop_reason": "eos",
+          "sampled_token_logprobs": [
+            -0.11362954805128406,
+            0.0
+          ],
+          "logits_sha256": "3aa3d6cd9de34d3ae60d9bd8a0a5f280412e9f87d8ab9ab749d4ff4413fb5613",
+          "layer_vector_sha256": "920f8a832a811154a41c1b309b09e1fee9d04dc3ba6c089e6ca7dd8ef39da7d7",
+          "token_scores": {
+            "labels": {
+              "Yes": {
+                "token_id": 9454,
+                "logit": 19.5,
+                "probability": 0.8925885558128357,
+                "rank": 1
+              },
+              "No": {
+                "token_id": 2753,
+                "logit": 18.765625,
+                "probability": 0.07718520611524582,
+                "rank": 2
+              },
+              "Unknown": {
+                "token_id": 13790,
+                "logit": 18.484375,
+                "probability": 0.03022615984082222,
+                "rank": 3
+              },
+              " Yes": {
+                "token_id": 7414,
+                "logit": 11.359375,
+                "probability": 1.465173468662151e-12,
+                "rank": 7
+              },
+              " No": {
+                "token_id": 2308,
+                "logit": 9.765625,
+                "probability": 7.222700763214254e-15,
+                "rank": 19
+              },
+              " Unknown": {
+                "token_id": 21693,
+                "logit": 10.6640625,
+                "probability": 1.4431838157250715e-13,
+                "rank": 13
+              }
+            },
+            "top3": [
+              {
+                "token_id": 9454,
+                "logit": 19.5,
+                "probability": 0.8925885558128357,
+                "rank": 1,
+                "text": "Yes"
+              },
+              {
+                "token_id": 2753,
+                "logit": 18.765625,
+                "probability": 0.07718520611524582,
+                "rank": 2,
+                "text": "No"
+              },
+              {
+                "token_id": 13790,
+                "logit": 18.484375,
+                "probability": 0.03022615984082222,
+                "rank": 3,
+                "text": "Unknown"
+              }
+            ],
+            "yes_minus_no_logit": 0.734375,
+            "first_generated_token": {
+              "token_id": 9454,
+              "logit": 19.5,
+              "probability": 0.8925885558128357,
+              "rank": 1
+            }
+          }
+        },
+        {
+          "call_id": "1a8042198ecfdb4ebd35035864e0cdcb5399268004f9e9b1cc4a70a9321aeb6c",
+          "stage": "private",
+          "agent_id": 3,
+          "role": "trace",
+          "seed": 41,
+          "request_sha256": "aea548395c7c20a359857e93521084863ca514603f215c7a8be88e76ebb1fe35",
+          "prompt_tokens": 714,
+          "prompt_tokens_sha256": "65e641aed309b4cbab451d7c49a27ebed06bd2735cfccc924bf2933facfc0a8c",
+          "anchor_token_id": 198,
+          "text": "Yes",
+          "parsed": "yes",
+          "generated_token_ids": [
+            9454,
+            151645
+          ],
+          "stop_reason": "eos",
+          "sampled_token_logprobs": [
+            -0.11362954805128406,
+            0.0
+          ],
+          "logits_sha256": "3aa3d6cd9de34d3ae60d9bd8a0a5f280412e9f87d8ab9ab749d4ff4413fb5613",
+          "layer_vector_sha256": "920f8a832a811154a41c1b309b09e1fee9d04dc3ba6c089e6ca7dd8ef39da7d7",
+          "token_scores": {
+            "labels": {
+              "Yes": {
+                "token_id": 9454,
+                "logit": 19.5,
+                "probability": 0.8925885558128357,
+                "rank": 1
+              },
+              "No": {
+                "token_id": 2753,
+                "logit": 18.765625,
+                "probability": 0.07718520611524582,
+                "rank": 2
+              },
+              "Unknown": {
+                "token_id": 13790,
+                "logit": 18.484375,
+                "probability": 0.03022615984082222,
+                "rank": 3
+              },
+              " Yes": {
+                "token_id": 7414,
+                "logit": 11.359375,
+                "probability": 1.465173468662151e-12,
+                "rank": 7
+              },
+              " No": {
+                "token_id": 2308,
+                "logit": 9.765625,
+                "probability": 7.222700763214254e-15,
+                "rank": 19
+              },
+              " Unknown": {
+                "token_id": 21693,
+                "logit": 10.6640625,
+                "probability": 1.4431838157250715e-13,
+                "rank": 13
+              }
+            },
+            "top3": [
+              {
+                "token_id": 9454,
+                "logit": 19.5,
+                "probability": 0.8925885558128357,
+                "rank": 1,
+                "text": "Yes"
+              },
+              {
+                "token_id": 2753,
+                "logit": 18.765625,
+                "probability": 0.07718520611524582,
+                "rank": 2,
+                "text": "No"
+              },
+              {
+                "token_id": 13790,
+                "logit": 18.484375,
+                "probability": 0.03022615984082222,
+                "rank": 3,
+                "text": "Unknown"
+              }
+            ],
+            "yes_minus_no_logit": 0.734375,
+            "first_generated_token": {
+              "token_id": 9454,
+              "logit": 19.5,
+              "probability": 0.8925885558128357,
+              "rank": 1
+            }
+          }
+        },
+        {
+          "call_id": "46c4e5a271fd5a93781203e5677bd82a356cec627bd3cb5822d51f14de1df65d",
+          "stage": "private",
+          "agent_id": 3,
+          "role": "trace",
+          "seed": 51,
+          "request_sha256": "290b23131c9cbf66ca4c65ebf7626213c25699e53b66192eed639c1b090e02c1",
+          "prompt_tokens": 714,
+          "prompt_tokens_sha256": "65e641aed309b4cbab451d7c49a27ebed06bd2735cfccc924bf2933facfc0a8c",
+          "anchor_token_id": 198,
+          "text": "Yes",
+          "parsed": "yes",
+          "generated_token_ids": [
+            9454,
+            151645
+          ],
+          "stop_reason": "eos",
+          "sampled_token_logprobs": [
+            -0.11362954805128406,
+            0.0
+          ],
+          "logits_sha256": "3aa3d6cd9de34d3ae60d9bd8a0a5f280412e9f87d8ab9ab749d4ff4413fb5613",
+          "layer_vector_sha256": "920f8a832a811154a41c1b309b09e1fee9d04dc3ba6c089e6ca7dd8ef39da7d7",
+          "token_scores": {
+            "labels": {
+              "Yes": {
+                "token_id": 9454,
+                "logit": 19.5,
+                "probability": 0.8925885558128357,
+                "rank": 1
+              },
+              "No": {
+                "token_id": 2753,
+                "logit": 18.765625,
+                "probability": 0.07718520611524582,
+                "rank": 2
+              },
+              "Unknown": {
+                "token_id": 13790,
+                "logit": 18.484375,
+                "probability": 0.03022615984082222,
+                "rank": 3
+              },
+              " Yes": {
+                "token_id": 7414,
+                "logit": 11.359375,
+                "probability": 1.465173468662151e-12,
+                "rank": 7
+              },
+              " No": {
+                "token_id": 2308,
+                "logit": 9.765625,
+                "probability": 7.222700763214254e-15,
+                "rank": 19
+              },
+              " Unknown": {
+                "token_id": 21693,
+                "logit": 10.6640625,
+                "probability": 1.4431838157250715e-13,
+                "rank": 13
+              }
+            },
+            "top3": [
+              {
+                "token_id": 9454,
+                "logit": 19.5,
+                "probability": 0.8925885558128357,
+                "rank": 1,
+                "text": "Yes"
+              },
+              {
+                "token_id": 2753,
+                "logit": 18.765625,
+                "probability": 0.07718520611524582,
+                "rank": 2,
+                "text": "No"
+              },
+              {
+                "token_id": 13790,
+                "logit": 18.484375,
+                "probability": 0.03022615984082222,
+                "rank": 3,
+                "text": "Unknown"
+              }
+            ],
+            "yes_minus_no_logit": 0.734375,
+            "first_generated_token": {
+              "token_id": 9454,
+              "logit": 19.5,
+              "probability": 0.8925885558128357,
+              "rank": 1
+            }
+          }
+        },
+        {
+          "call_id": "766089dc3ffb3ae5eb8e9d95932f8769cd4f56af20248a22dc19c70c4133217c",
+          "stage": "private",
+          "agent_id": 3,
+          "role": "trace",
+          "seed": 61,
+          "request_sha256": "51fd098a5b0f8e6975115d835b9fc10395b3065cd07ddfb3a8f903b6359b7c14",
+          "prompt_tokens": 714,
+          "prompt_tokens_sha256": "65e641aed309b4cbab451d7c49a27ebed06bd2735cfccc924bf2933facfc0a8c",
+          "anchor_token_id": 198,
+          "text": "No",
+          "parsed": "no",
+          "generated_token_ids": [
+            2753,
+            151645
+          ],
+          "stop_reason": "eos",
+          "sampled_token_logprobs": [
+            -2.561547470946433,
+            -1.1920929665620916e-07
+          ],
+          "logits_sha256": "3aa3d6cd9de34d3ae60d9bd8a0a5f280412e9f87d8ab9ab749d4ff4413fb5613",
+          "layer_vector_sha256": "920f8a832a811154a41c1b309b09e1fee9d04dc3ba6c089e6ca7dd8ef39da7d7",
+          "token_scores": {
+            "labels": {
+              "Yes": {
+                "token_id": 9454,
+                "logit": 19.5,
+                "probability": 0.8925885558128357,
+                "rank": 1
+              },
+              "No": {
+                "token_id": 2753,
+                "logit": 18.765625,
+                "probability": 0.07718520611524582,
+                "rank": 2
+              },
+              "Unknown": {
+                "token_id": 13790,
+                "logit": 18.484375,
+                "probability": 0.03022615984082222,
+                "rank": 3
+              },
+              " Yes": {
+                "token_id": 7414,
+                "logit": 11.359375,
+                "probability": 1.465173468662151e-12,
+                "rank": 7
+              },
+              " No": {
+                "token_id": 2308,
+                "logit": 9.765625,
+                "probability": 7.222700763214254e-15,
+                "rank": 19
+              },
+              " Unknown": {
+                "token_id": 21693,
+                "logit": 10.6640625,
+                "probability": 1.4431838157250715e-13,
+                "rank": 13
+              }
+            },
+            "top3": [
+              {
+                "token_id": 9454,
+                "logit": 19.5,
+                "probability": 0.8925885558128357,
+                "rank": 1,
+                "text": "Yes"
+              },
+              {
+                "token_id": 2753,
+                "logit": 18.765625,
+                "probability": 0.07718520611524582,
+                "rank": 2,
+                "text": "No"
+              },
+              {
+                "token_id": 13790,
+                "logit": 18.484375,
+                "probability": 0.03022615984082222,
+                "rank": 3,
+                "text": "Unknown"
+              }
+            ],
+            "yes_minus_no_logit": 0.734375,
+            "first_generated_token": {
+              "token_id": 2753,
+              "logit": 18.765625,
+              "probability": 0.07718520611524582,
+              "rank": 2
+            }
+          }
+        },
+        {
+          "call_id": "9e7d8475bd6180ec6b73b0ce8cc3b97a11a2e6e10e96c0e42fb2b2e071612888",
+          "stage": "private",
+          "agent_id": 3,
+          "role": "trace",
+          "seed": 71,
+          "request_sha256": "ee697d140b464cb2e502dd6ed5913538804a2ccc652a80804c3a8c332d65be0d",
+          "prompt_tokens": 714,
+          "prompt_tokens_sha256": "65e641aed309b4cbab451d7c49a27ebed06bd2735cfccc924bf2933facfc0a8c",
+          "anchor_token_id": 198,
+          "text": "Yes",
+          "parsed": "yes",
+          "generated_token_ids": [
+            9454,
+            151645
+          ],
+          "stop_reason": "eos",
+          "sampled_token_logprobs": [
+            -0.11362954805128406,
+            0.0
+          ],
+          "logits_sha256": "3aa3d6cd9de34d3ae60d9bd8a0a5f280412e9f87d8ab9ab749d4ff4413fb5613",
+          "layer_vector_sha256": "920f8a832a811154a41c1b309b09e1fee9d04dc3ba6c089e6ca7dd8ef39da7d7",
+          "token_scores": {
+            "labels": {
+              "Yes": {
+                "token_id": 9454,
+                "logit": 19.5,
+                "probability": 0.8925885558128357,
+                "rank": 1
+              },
+              "No": {
+                "token_id": 2753,
+                "logit": 18.765625,
+                "probability": 0.07718520611524582,
+                "rank": 2
+              },
+              "Unknown": {
+                "token_id": 13790,
+                "logit": 18.484375,
+                "probability": 0.03022615984082222,
+                "rank": 3
+              },
+              " Yes": {
+                "token_id": 7414,
+                "logit": 11.359375,
+                "probability": 1.465173468662151e-12,
+                "rank": 7
+              },
+              " No": {
+                "token_id": 2308,
+                "logit": 9.765625,
+                "probability": 7.222700763214254e-15,
+                "rank": 19
+              },
+              " Unknown": {
+                "token_id": 21693,
+                "logit": 10.6640625,
+                "probability": 1.4431838157250715e-13,
+                "rank": 13
+              }
+            },
+            "top3": [
+              {
+                "token_id": 9454,
+                "logit": 19.5,
+                "probability": 0.8925885558128357,
+                "rank": 1,
+                "text": "Yes"
+              },
+              {
+                "token_id": 2753,
+                "logit": 18.765625,
+                "probability": 0.07718520611524582,
+                "rank": 2,
+                "text": "No"
+              },
+              {
+                "token_id": 13790,
+                "logit": 18.484375,
+                "probability": 0.03022615984082222,
+                "rank": 3,
+                "text": "Unknown"
+              }
+            ],
+            "yes_minus_no_logit": 0.734375,
+            "first_generated_token": {
+              "token_id": 9454,
+              "logit": 19.5,
+              "probability": 0.8925885558128357,
+              "rank": 1
+            }
+          }
+        }
+      ]
+    },
+    "peer": {
+      "historical_call_id": "9e438f653ab83af1304fa6fb25f2a941a5d599349547c3a2fe8559ef9660dd31",
+      "historical_text": "Yes",
+      "historical_request_sha256": "4e4a6dec1158220ef124f8436e56b40ddb68d0e73af76b5b781f86ca339cb402",
+      "seeds": [
+        429618993130734582,
+        11,
+        21,
+        31,
+        41,
+        51,
+        61,
+        71
+      ],
+      "prompt_ids_identical": true,
+      "answer_counts": {
+        "yes": 6,
+        "no": 2
+      },
+      "logits_max_abs_delta": 0.0,
+      "layer_vector_max_abs_delta": 0.0,
+      "calls": [
+        {
+          "call_id": "838a56be2fdbee8f9b06861fb47ce4d0caabd0dea69b0fd99006639a2b142b45",
+          "stage": "peer",
+          "agent_id": 3,
+          "role": "trace",
+          "seed": 429618993130734582,
+          "request_sha256": "d6d66e380cd0b6e383bc7b24368638fbde02643d80fe1ab52f239d804365b70f",
+          "prompt_tokens": 741,
+          "prompt_tokens_sha256": "f9228685b86aa377ecc2a96e3fd3c2d561b9ba5e26bac7a4faf3081332bd3a81",
+          "anchor_token_id": 198,
+          "text": "Yes",
+          "parsed": "yes",
+          "generated_token_ids": [
+            9454,
+            151645
+          ],
+          "stop_reason": "eos",
+          "sampled_token_logprobs": [
+            -0.15410741772507708,
+            0.0
+          ],
+          "logits_sha256": "542020058603031c115578a1932229b3f58ce7c3ca62b14ce6a8ae2cfac2d41a",
+          "layer_vector_sha256": "51021b774351e8c4e32c5706c266b785687cace71880918cde51ae8ecb0c8d0f",
+          "token_scores": {
+            "labels": {
+              "Yes": {
+                "token_id": 9454,
+                "logit": 19.765625,
+                "probability": 0.8571799993515015,
+                "rank": 1
+              },
+              "No": {
+                "token_id": 2753,
+                "logit": 19.203125,
+                "probability": 0.13145281374454498,
+                "rank": 2
+              },
+              "Unknown": {
+                "token_id": 13790,
+                "logit": 18.46875,
+                "probability": 0.011367176659405231,
+                "rank": 3
+              },
+              " Yes": {
+                "token_id": 7414,
+                "logit": 11.6640625,
+                "probability": 1.6027271740673421e-12,
+                "rank": 6
+              },
+              " No": {
+                "token_id": 2308,
+                "logit": 10.2109375,
+                "probability": 1.2625417408046978e-14,
+                "rank": 19
+              },
+              " Unknown": {
+                "token_id": 21693,
+                "logit": 10.734375,
+                "probability": 7.227692836592192e-14,
+                "rank": 14
+              }
+            },
+            "top3": [
+              {
+                "token_id": 9454,
+                "logit": 19.765625,
+                "probability": 0.8571799993515015,
+                "rank": 1,
+                "text": "Yes"
+              },
+              {
+                "token_id": 2753,
+                "logit": 19.203125,
+                "probability": 0.13145281374454498,
+                "rank": 2,
+                "text": "No"
+              },
+              {
+                "token_id": 13790,
+                "logit": 18.46875,
+                "probability": 0.011367176659405231,
+                "rank": 3,
+                "text": "Unknown"
+              }
+            ],
+            "yes_minus_no_logit": 0.5625,
+            "first_generated_token": {
+              "token_id": 9454,
+              "logit": 19.765625,
+              "probability": 0.8571799993515015,
+              "rank": 1
+            }
+          }
+        },
+        {
+          "call_id": "2f66760b5069047d50b49d8e1fe9d8f3fd7b1c9607e618c39ffa0cfb50c36eb8",
+          "stage": "peer",
+          "agent_id": 3,
+          "role": "trace",
+          "seed": 11,
+          "request_sha256": "2e13103dfcad1ae3113a4130cf23c157ba267447d4fc92954520283db58b3974",
+          "prompt_tokens": 741,
+          "prompt_tokens_sha256": "f9228685b86aa377ecc2a96e3fd3c2d561b9ba5e26bac7a4faf3081332bd3a81",
+          "anchor_token_id": 198,
+          "text": "Yes",
+          "parsed": "yes",
+          "generated_token_ids": [
+            9454,
+            151645
+          ],
+          "stop_reason": "eos",
+          "sampled_token_logprobs": [
+            -0.15410741772507708,
+            0.0
+          ],
+          "logits_sha256": "542020058603031c115578a1932229b3f58ce7c3ca62b14ce6a8ae2cfac2d41a",
+          "layer_vector_sha256": "51021b774351e8c4e32c5706c266b785687cace71880918cde51ae8ecb0c8d0f",
+          "token_scores": {
+            "labels": {
+              "Yes": {
+                "token_id": 9454,
+                "logit": 19.765625,
+                "probability": 0.8571799993515015,
+                "rank": 1
+              },
+              "No": {
+                "token_id": 2753,
+                "logit": 19.203125,
+                "probability": 0.13145281374454498,
+                "rank": 2
+              },
+              "Unknown": {
+                "token_id": 13790,
+                "logit": 18.46875,
+                "probability": 0.011367176659405231,
+                "rank": 3
+              },
+              " Yes": {
+                "token_id": 7414,
+                "logit": 11.6640625,
+                "probability": 1.6027271740673421e-12,
+                "rank": 6
+              },
+              " No": {
+                "token_id": 2308,
+                "logit": 10.2109375,
+                "probability": 1.2625417408046978e-14,
+                "rank": 19
+              },
+              " Unknown": {
+                "token_id": 21693,
+                "logit": 10.734375,
+                "probability": 7.227692836592192e-14,
+                "rank": 14
+              }
+            },
+            "top3": [
+              {
+                "token_id": 9454,
+                "logit": 19.765625,
+                "probability": 0.8571799993515015,
+                "rank": 1,
+                "text": "Yes"
+              },
+              {
+                "token_id": 2753,
+                "logit": 19.203125,
+                "probability": 0.13145281374454498,
+                "rank": 2,
+                "text": "No"
+              },
+              {
+                "token_id": 13790,
+                "logit": 18.46875,
+                "probability": 0.011367176659405231,
+                "rank": 3,
+                "text": "Unknown"
+              }
+            ],
+            "yes_minus_no_logit": 0.5625,
+            "first_generated_token": {
+              "token_id": 9454,
+              "logit": 19.765625,
+              "probability": 0.8571799993515015,
+              "rank": 1
+            }
+          }
+        },
+        {
+          "call_id": "b09e9b3f50803e32e7f303e5a0ff84ed3be79b214f9ffd4f7010b540bd8a151a",
+          "stage": "peer",
+          "agent_id": 3,
+          "role": "trace",
+          "seed": 21,
+          "request_sha256": "8cde139528dc2f1cccbc36b02e2b6783d4adadb7be3af613ae41e9d41d51457e",
+          "prompt_tokens": 741,
+          "prompt_tokens_sha256": "f9228685b86aa377ecc2a96e3fd3c2d561b9ba5e26bac7a4faf3081332bd3a81",
+          "anchor_token_id": 198,
+          "text": "Yes",
+          "parsed": "yes",
+          "generated_token_ids": [
+            9454,
+            151645
+          ],
+          "stop_reason": "eos",
+          "sampled_token_logprobs": [
+            -0.15410741772507708,
+            0.0
+          ],
+          "logits_sha256": "542020058603031c115578a1932229b3f58ce7c3ca62b14ce6a8ae2cfac2d41a",
+          "layer_vector_sha256": "51021b774351e8c4e32c5706c266b785687cace71880918cde51ae8ecb0c8d0f",
+          "token_scores": {
+            "labels": {
+              "Yes": {
+                "token_id": 9454,
+                "logit": 19.765625,
+                "probability": 0.8571799993515015,
+                "rank": 1
+              },
+              "No": {
+                "token_id": 2753,
+                "logit": 19.203125,
+                "probability": 0.13145281374454498,
+                "rank": 2
+              },
+              "Unknown": {
+                "token_id": 13790,
+                "logit": 18.46875,
+                "probability": 0.011367176659405231,
+                "rank": 3
+              },
+              " Yes": {
+                "token_id": 7414,
+                "logit": 11.6640625,
+                "probability": 1.6027271740673421e-12,
+                "rank": 6
+              },
+              " No": {
+                "token_id": 2308,
+                "logit": 10.2109375,
+                "probability": 1.2625417408046978e-14,
+                "rank": 19
+              },
+              " Unknown": {
+                "token_id": 21693,
+                "logit": 10.734375,
+                "probability": 7.227692836592192e-14,
+                "rank": 14
+              }
+            },
+            "top3": [
+              {
+                "token_id": 9454,
+                "logit": 19.765625,
+                "probability": 0.8571799993515015,
+                "rank": 1,
+                "text": "Yes"
+              },
+              {
+                "token_id": 2753,
+                "logit": 19.203125,
+                "probability": 0.13145281374454498,
+                "rank": 2,
+                "text": "No"
+              },
+              {
+                "token_id": 13790,
+                "logit": 18.46875,
+                "probability": 0.011367176659405231,
+                "rank": 3,
+                "text": "Unknown"
+              }
+            ],
+            "yes_minus_no_logit": 0.5625,
+            "first_generated_token": {
+              "token_id": 9454,
+              "logit": 19.765625,
+              "probability": 0.8571799993515015,
+              "rank": 1
+            }
+          }
+        },
+        {
+          "call_id": "ddc0dc2c8b064ab9134fccbb86c6af49d95067c1d136ec121abdb36b2931f6b0",
+          "stage": "peer",
+          "agent_id": 3,
+          "role": "trace",
+          "seed": 31,
+          "request_sha256": "35a836faa1e05862300038e3b3f226d1123f7938c5310bd1c039b6fe8421f365",
+          "prompt_tokens": 741,
+          "prompt_tokens_sha256": "f9228685b86aa377ecc2a96e3fd3c2d561b9ba5e26bac7a4faf3081332bd3a81",
+          "anchor_token_id": 198,
+          "text": "Yes",
+          "parsed": "yes",
+          "generated_token_ids": [
+            9454,
+            151645
+          ],
+          "stop_reason": "eos",
+          "sampled_token_logprobs": [
+            -0.15410741772507708,
+            0.0
+          ],
+          "logits_sha256": "542020058603031c115578a1932229b3f58ce7c3ca62b14ce6a8ae2cfac2d41a",
+          "layer_vector_sha256": "51021b774351e8c4e32c5706c266b785687cace71880918cde51ae8ecb0c8d0f",
+          "token_scores": {
+            "labels": {
+              "Yes": {
+                "token_id": 9454,
+                "logit": 19.765625,
+                "probability": 0.8571799993515015,
+                "rank": 1
+              },
+              "No": {
+                "token_id": 2753,
+                "logit": 19.203125,
+                "probability": 0.13145281374454498,
+                "rank": 2
+              },
+              "Unknown": {
+                "token_id": 13790,
+                "logit": 18.46875,
+                "probability": 0.011367176659405231,
+                "rank": 3
+              },
+              " Yes": {
+                "token_id": 7414,
+                "logit": 11.6640625,
+                "probability": 1.6027271740673421e-12,
+                "rank": 6
+              },
+              " No": {
+                "token_id": 2308,
+                "logit": 10.2109375,
+                "probability": 1.2625417408046978e-14,
+                "rank": 19
+              },
+              " Unknown": {
+                "token_id": 21693,
+                "logit": 10.734375,
+                "probability": 7.227692836592192e-14,
+                "rank": 14
+              }
+            },
+            "top3": [
+              {
+                "token_id": 9454,
+                "logit": 19.765625,
+                "probability": 0.8571799993515015,
+                "rank": 1,
+                "text": "Yes"
+              },
+              {
+                "token_id": 2753,
+                "logit": 19.203125,
+                "probability": 0.13145281374454498,
+                "rank": 2,
+                "text": "No"
+              },
+              {
+                "token_id": 13790,
+                "logit": 18.46875,
+                "probability": 0.011367176659405231,
+                "rank": 3,
+                "text": "Unknown"
+              }
+            ],
+            "yes_minus_no_logit": 0.5625,
+            "first_generated_token": {
+              "token_id": 9454,
+              "logit": 19.765625,
+              "probability": 0.8571799993515015,
+              "rank": 1
+            }
+          }
+        },
+        {
+          "call_id": "639619cb8c394f8b30cd8630e0b8fe18fcb5bb8ae920540f860f620850ae9eaa",
+          "stage": "peer",
+          "agent_id": 3,
+          "role": "trace",
+          "seed": 41,
+          "request_sha256": "a4769d46d8195da3fca3f1988deb7f86ec8f8e8323c2d3e595360d11019160bc",
+          "prompt_tokens": 741,
+          "prompt_tokens_sha256": "f9228685b86aa377ecc2a96e3fd3c2d561b9ba5e26bac7a4faf3081332bd3a81",
+          "anchor_token_id": 198,
+          "text": "No",
+          "parsed": "no",
+          "generated_token_ids": [
+            2753,
+            151645
+          ],
+          "stop_reason": "eos",
+          "sampled_token_logprobs": [
+            -2.0291074359569685,
+            0.0
+          ],
+          "logits_sha256": "542020058603031c115578a1932229b3f58ce7c3ca62b14ce6a8ae2cfac2d41a",
+          "layer_vector_sha256": "51021b774351e8c4e32c5706c266b785687cace71880918cde51ae8ecb0c8d0f",
+          "token_scores": {
+            "labels": {
+              "Yes": {
+                "token_id": 9454,
+                "logit": 19.765625,
+                "probability": 0.8571799993515015,
+                "rank": 1
+              },
+              "No": {
+                "token_id": 2753,
+                "logit": 19.203125,
+                "probability": 0.13145281374454498,
+                "rank": 2
+              },
+              "Unknown": {
+                "token_id": 13790,
+                "logit": 18.46875,
+                "probability": 0.011367176659405231,
+                "rank": 3
+              },
+              " Yes": {
+                "token_id": 7414,
+                "logit": 11.6640625,
+                "probability": 1.6027271740673421e-12,
+                "rank": 6
+              },
+              " No": {
+                "token_id": 2308,
+                "logit": 10.2109375,
+                "probability": 1.2625417408046978e-14,
+                "rank": 19
+              },
+              " Unknown": {
+                "token_id": 21693,
+                "logit": 10.734375,
+                "probability": 7.227692836592192e-14,
+                "rank": 14
+              }
+            },
+            "top3": [
+              {
+                "token_id": 9454,
+                "logit": 19.765625,
+                "probability": 0.8571799993515015,
+                "rank": 1,
+                "text": "Yes"
+              },
+              {
+                "token_id": 2753,
+                "logit": 19.203125,
+                "probability": 0.13145281374454498,
+                "rank": 2,
+                "text": "No"
+              },
+              {
+                "token_id": 13790,
+                "logit": 18.46875,
+                "probability": 0.011367176659405231,
+                "rank": 3,
+                "text": "Unknown"
+              }
+            ],
+            "yes_minus_no_logit": 0.5625,
+            "first_generated_token": {
+              "token_id": 2753,
+              "logit": 19.203125,
+              "probability": 0.13145281374454498,
+              "rank": 2
+            }
+          }
+        },
+        {
+          "call_id": "92f58037a882ab00c60f06a2ae80b020e97f8001bece770fa676f7d5f9eef465",
+          "stage": "peer",
+          "agent_id": 3,
+          "role": "trace",
+          "seed": 51,
+          "request_sha256": "e455ad79302bb6175756da58b75ba22d7d8e749e0a76bedb8b82c4643defec12",
+          "prompt_tokens": 741,
+          "prompt_tokens_sha256": "f9228685b86aa377ecc2a96e3fd3c2d561b9ba5e26bac7a4faf3081332bd3a81",
+          "anchor_token_id": 198,
+          "text": "Yes",
+          "parsed": "yes",
+          "generated_token_ids": [
+            9454,
+            151645
+          ],
+          "stop_reason": "eos",
+          "sampled_token_logprobs": [
+            -0.15410741772507708,
+            0.0
+          ],
+          "logits_sha256": "542020058603031c115578a1932229b3f58ce7c3ca62b14ce6a8ae2cfac2d41a",
+          "layer_vector_sha256": "51021b774351e8c4e32c5706c266b785687cace71880918cde51ae8ecb0c8d0f",
+          "token_scores": {
+            "labels": {
+              "Yes": {
+                "token_id": 9454,
+                "logit": 19.765625,
+                "probability": 0.8571799993515015,
+                "rank": 1
+              },
+              "No": {
+                "token_id": 2753,
+                "logit": 19.203125,
+                "probability": 0.13145281374454498,
+                "rank": 2
+              },
+              "Unknown": {
+                "token_id": 13790,
+                "logit": 18.46875,
+                "probability": 0.011367176659405231,
+                "rank": 3
+              },
+              " Yes": {
+                "token_id": 7414,
+                "logit": 11.6640625,
+                "probability": 1.6027271740673421e-12,
+                "rank": 6
+              },
+              " No": {
+                "token_id": 2308,
+                "logit": 10.2109375,
+                "probability": 1.2625417408046978e-14,
+                "rank": 19
+              },
+              " Unknown": {
+                "token_id": 21693,
+                "logit": 10.734375,
+                "probability": 7.227692836592192e-14,
+                "rank": 14
+              }
+            },
+            "top3": [
+              {
+                "token_id": 9454,
+                "logit": 19.765625,
+                "probability": 0.8571799993515015,
+                "rank": 1,
+                "text": "Yes"
+              },
+              {
+                "token_id": 2753,
+                "logit": 19.203125,
+                "probability": 0.13145281374454498,
+                "rank": 2,
+                "text": "No"
+              },
+              {
+                "token_id": 13790,
+                "logit": 18.46875,
+                "probability": 0.011367176659405231,
+                "rank": 3,
+                "text": "Unknown"
+              }
+            ],
+            "yes_minus_no_logit": 0.5625,
+            "first_generated_token": {
+              "token_id": 9454,
+              "logit": 19.765625,
+              "probability": 0.8571799993515015,
+              "rank": 1
+            }
+          }
+        },
+        {
+          "call_id": "1a50662e33030b92f01165303a134b41f68b28c2c5b62c9a6d109e9304663243",
+          "stage": "peer",
+          "agent_id": 3,
+          "role": "trace",
+          "seed": 61,
+          "request_sha256": "fe9727280e4f5b50c1502f0882ece8715de6390159335fb4c2e27feed6a64bf6",
+          "prompt_tokens": 741,
+          "prompt_tokens_sha256": "f9228685b86aa377ecc2a96e3fd3c2d561b9ba5e26bac7a4faf3081332bd3a81",
+          "anchor_token_id": 198,
+          "text": "No",
+          "parsed": "no",
+          "generated_token_ids": [
+            2753,
+            151645
+          ],
+          "stop_reason": "eos",
+          "sampled_token_logprobs": [
+            -2.0291074359569685,
+            0.0
+          ],
+          "logits_sha256": "542020058603031c115578a1932229b3f58ce7c3ca62b14ce6a8ae2cfac2d41a",
+          "layer_vector_sha256": "51021b774351e8c4e32c5706c266b785687cace71880918cde51ae8ecb0c8d0f",
+          "token_scores": {
+            "labels": {
+              "Yes": {
+                "token_id": 9454,
+                "logit": 19.765625,
+                "probability": 0.8571799993515015,
+                "rank": 1
+              },
+              "No": {
+                "token_id": 2753,
+                "logit": 19.203125,
+                "probability": 0.13145281374454498,
+                "rank": 2
+              },
+              "Unknown": {
+                "token_id": 13790,
+                "logit": 18.46875,
+                "probability": 0.011367176659405231,
+                "rank": 3
+              },
+              " Yes": {
+                "token_id": 7414,
+                "logit": 11.6640625,
+                "probability": 1.6027271740673421e-12,
+                "rank": 6
+              },
+              " No": {
+                "token_id": 2308,
+                "logit": 10.2109375,
+                "probability": 1.2625417408046978e-14,
+                "rank": 19
+              },
+              " Unknown": {
+                "token_id": 21693,
+                "logit": 10.734375,
+                "probability": 7.227692836592192e-14,
+                "rank": 14
+              }
+            },
+            "top3": [
+              {
+                "token_id": 9454,
+                "logit": 19.765625,
+                "probability": 0.8571799993515015,
+                "rank": 1,
+                "text": "Yes"
+              },
+              {
+                "token_id": 2753,
+                "logit": 19.203125,
+                "probability": 0.13145281374454498,
+                "rank": 2,
+                "text": "No"
+              },
+              {
+                "token_id": 13790,
+                "logit": 18.46875,
+                "probability": 0.011367176659405231,
+                "rank": 3,
+                "text": "Unknown"
+              }
+            ],
+            "yes_minus_no_logit": 0.5625,
+            "first_generated_token": {
+              "token_id": 2753,
+              "logit": 19.203125,
+              "probability": 0.13145281374454498,
+              "rank": 2
+            }
+          }
+        },
+        {
+          "call_id": "abefb351cc22d192bf5a73c0da821218b38fc10cf64369d29d1aaca8c0c170d6",
+          "stage": "peer",
+          "agent_id": 3,
+          "role": "trace",
+          "seed": 71,
+          "request_sha256": "7268169df64910a0156e746efb362ec9064d88a2520de5c77c6f5ae08cbba9e6",
+          "prompt_tokens": 741,
+          "prompt_tokens_sha256": "f9228685b86aa377ecc2a96e3fd3c2d561b9ba5e26bac7a4faf3081332bd3a81",
+          "anchor_token_id": 198,
+          "text": "Yes",
+          "parsed": "yes",
+          "generated_token_ids": [
+            9454,
+            151645
+          ],
+          "stop_reason": "eos",
+          "sampled_token_logprobs": [
+            -0.15410741772507708,
+            0.0
+          ],
+          "logits_sha256": "542020058603031c115578a1932229b3f58ce7c3ca62b14ce6a8ae2cfac2d41a",
+          "layer_vector_sha256": "51021b774351e8c4e32c5706c266b785687cace71880918cde51ae8ecb0c8d0f",
+          "token_scores": {
+            "labels": {
+              "Yes": {
+                "token_id": 9454,
+                "logit": 19.765625,
+                "probability": 0.8571799993515015,
+                "rank": 1
+              },
+              "No": {
+                "token_id": 2753,
+                "logit": 19.203125,
+                "probability": 0.13145281374454498,
+                "rank": 2
+              },
+              "Unknown": {
+                "token_id": 13790,
+                "logit": 18.46875,
+                "probability": 0.011367176659405231,
+                "rank": 3
+              },
+              " Yes": {
+                "token_id": 7414,
+                "logit": 11.6640625,
+                "probability": 1.6027271740673421e-12,
+                "rank": 6
+              },
+              " No": {
+                "token_id": 2308,
+                "logit": 10.2109375,
+                "probability": 1.2625417408046978e-14,
+                "rank": 19
+              },
+              " Unknown": {
+                "token_id": 21693,
+                "logit": 10.734375,
+                "probability": 7.227692836592192e-14,
+                "rank": 14
+              }
+            },
+            "top3": [
+              {
+                "token_id": 9454,
+                "logit": 19.765625,
+                "probability": 0.8571799993515015,
+                "rank": 1,
+                "text": "Yes"
+              },
+              {
+                "token_id": 2753,
+                "logit": 19.203125,
+                "probability": 0.13145281374454498,
+                "rank": 2,
+                "text": "No"
+              },
+              {
+                "token_id": 13790,
+                "logit": 18.46875,
+                "probability": 0.011367176659405231,
+                "rank": 3,
+                "text": "Unknown"
+              }
+            ],
+            "yes_minus_no_logit": 0.5625,
+            "first_generated_token": {
+              "token_id": 9454,
+              "logit": 19.765625,
+              "probability": 0.8571799993515015,
+              "rank": 1
+            }
+          }
+        }
+      ]
+    }
+  }
+}

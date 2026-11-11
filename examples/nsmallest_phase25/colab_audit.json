@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "historical_exact_output_matches": 16,
+  "capture_parity_matches": 16,
+  "joined_sidecars": 48,
+  "vocabulary_size": 151936,
+  "block_width": 2048,
+  "fixed_prompt_answers": {
+    "private": {
+      "yes": 7,
+      "no": 1
+    },
+    "peer": {
+      "yes": 6,
+      "no": 2
+    }
+  },
+  "paired_seed_answers": {
+    "no->no": 1,
+    "yes->no": 1,
+    "yes->yes": 6
+  },
+  "full_logits_max_abs_delta_within_prompt": 0.0,
+  "block_vector_max_abs_delta_within_prompt": 0.0,
+  "archive_sha256": "7fcbb377a7e1e4ef2ee5511b7dd45555b73510d3db31f1d579df18c222477ab0"
+}

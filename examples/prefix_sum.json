@@ -1,0 +1,24 @@
+[
+  {
+    "item_id": "prefix-sum-1",
+    "source_family": "prefix_sum",
+    "split": "main",
+    "source": {
+      "entrypoint": "prefix_sum",
+      "origin": "Original smoke-test fixture"
+    },
+    "artifact": "def prefix_sum(values):\n    totals = []\n    total = 0\n    for value in values:\n        total += value\n        totals.append(total)\n    return totals",
+    "diagnostic_trace": {
+      "input": {"values": [2, 1, 3]},
+      "observed": [2, 3, 6]
+    },
+    "claim": "Does prefix_sum(values=[2, 1, 3]) return [2, 3, 5] exactly?",
+    "gold": "no",
+    "role_checks": {
+      "trace": {"instruction": "Return the running total after the first and second additions as [first, second].", "expected": [2, 3]},
+      "boundary": {"instruction": "Return the length of totals immediately before the loop and after its first iteration as [before, after].", "expected": [0, 1]},
+      "invariant": {"instruction": "Return the final length of totals and the number of input values as [length, count].", "expected": [3, 3]},
+      "simulation": {"instruction": "Return the final list of totals.", "expected": [2, 3, 6]}
+    }
+  }
+]
